@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Move : MonoBehaviour
+public class JumpTo : MonoBehaviour
 {
 	public float smoothing = 7f;
 	public Vector3 Target

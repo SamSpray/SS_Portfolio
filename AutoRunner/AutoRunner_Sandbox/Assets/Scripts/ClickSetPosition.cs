@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ClickSetPosition : MonoBehaviour
 {
-	public Move moveScript;
+	public JumpTo jumpToScript;
 	
 	
 	void OnMouseDown ()
@@ -15,8 +15,8 @@ public class ClickSetPosition : MonoBehaviour
 		
 		if(hit.collider.gameObject == gameObject)
 		{
-			Vector3 newTarget = hit.point + new Vector3(0, 0.5f, 0);
-			moveScript.Target = newTarget;
+			Vector3 newTarget = hit.point + new Vector3(0, 0.5f, 0.8f);
+			jumpToScript.Target = newTarget;
 		}
 	}
 }
