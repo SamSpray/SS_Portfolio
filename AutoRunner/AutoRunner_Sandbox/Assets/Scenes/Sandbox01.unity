@@ -223,6 +223,8 @@ GameObject:
   - 136: {fileID: 344432911}
   - 114: {fileID: 344432908}
   - 114: {fileID: 344432912}
+  - 114: {fileID: 344432909}
+  - 54: {fileID: 344432910}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -255,6 +257,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .200000003
+  normalSpeed: .200000003
+  stop: 0
+  slow: .0199999996
+--- !u!114 &344432909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 344432906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f0e1bd1134a4cce92aa8d6bb2dd9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpEventDuration: 5
+--- !u!54 &344432910
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 344432906}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!136 &344432911
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -279,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc216b691d60844f18b36d44408188ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothing: 7
+  smoothing: 10
 --- !u!1 &527272105
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +589,7 @@ GameObject:
   - 124: {fileID: 722475428}
   - 81: {fileID: 722475427}
   - 114: {fileID: 722475432}
+  - 114: {fileID: 722475433}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -635,13 +668,27 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 722475426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8947ae06ca3df4fcc9786140c1d86f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 344432907}
-  smoothTime: 1
+  smoothTime: .5
+--- !u!114 &722475433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722475426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b064ff245cd244887b11a928ac9636bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 344432907}
+  smoothTime: 10
+  distance: 10
 --- !u!1 &803975516
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +758,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803975516}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &830896901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 830896903}
+  - 65: {fileID: 830896902}
+  m_Layer: 0
+  m_Name: JumpEventTrigger
+  m_TagString: JumpBox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &830896902
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830896901}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 26.7999992, z: 12.1300001}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &830896903
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830896901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.5034618, y: 3.58138084, z: -.197325706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &865330785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +2021,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: .289999992}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2131283457
 MeshFilter:
@@ -1967,3 +2054,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpToScript: {fileID: 344432912}
+  duration: 5
+  targetList: []
+  inJumpEvent: 0
