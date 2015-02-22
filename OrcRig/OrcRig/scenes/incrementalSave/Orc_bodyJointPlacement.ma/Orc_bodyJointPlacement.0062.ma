@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: Orc_bodyJointPlacement.ma
-//Last modified: Sat, Feb 21, 2015 10:29:41 PM
+//Last modified: Sat, Feb 21, 2015 10:16:36 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Orc_UV_s" -rfn "Orc_UV_sRN" -op "VERS|2015|UVER|undef|MADE|undef|CHNG|Sat, Feb 21, 2015 09:50:11 PM|ICON|undef|INFO|undef|OBJN|252|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 "/Users/Samantha/Desktop/My Portfolio/OrcRig/OrcRig//scenes/Orc_UV's.mb";
@@ -18,12 +18,12 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 40.734689648038028 179.12216272027456 213.98986843764274 ;
-	setAttr ".r" -type "double3" -5.1383527295651952 2173.3999999996699 2.0434785858085101e-16 ;
+	setAttr ".t" -type "double3" 1.8606240495141111 185.44117641257134 105.47109908409614 ;
+	setAttr ".r" -type "double3" -13.538352729554527 2164.1999999998825 -9.9659972922814056e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 189.76709109789081;
+	setAttr ".coi" 125.26466816601425;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -95,7 +95,7 @@ createNode joint -n "Spine_jnt02" -p "Spine_jnt01";
 	setAttr ".t" -type "double3" 15.312500020312314 -0.34193963899337376 2.245627170103261e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -1.2082016920501044e-09 -5.1788225373508657e-08 2.6728972572846641 ;
+	setAttr ".jo" -type "double3" -1.2082016920501044e-09 -5.178822537350865e-08 2.6728972572846641 ;
 	setAttr ".radi" 1.368745169778347;
 createNode joint -n "Spine_jnt03" -p "Spine_jnt02";
 	setAttr ".t" -type "double3" 25.728572433158376 -1.7319479184152442e-14 2.3255414605237925e-08 ;
@@ -498,15 +498,15 @@ createNode joint -n "LowerJaw_jnt02" -p "LowerJaw_jnt01";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 31.499080528265903 ;
 	setAttr ".radi" 0.55959700932656697;
-createNode transform -n "FaceCurves_grp";
-createNode joint -n "Neck_jnt01" -p "FaceCurves_grp";
+createNode transform -n "FaceCurves";
+createNode joint -n "Neck_jnt01" -p "FaceCurves";
 	setAttr ".t" -type "double3" -2.5632908397578848e-08 170.97718716448637 6.9808288433695278 ;
 	setAttr ".r" -type "double3" 0 0 8.8341529584875964 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -90.000000000000057 -61.348886176216823 90.000000000000028 ;
 	setAttr ".radi" 0.88170021236165697;
-createNode transform -n "UpperLip_crv" -p "FaceCurves_grp";
+createNode transform -n "UpperLip_crv" -p "FaceCurves";
 	setAttr ".t" -type "double3" 0 0 29.379444697319691 ;
 	setAttr ".rp" -type "double3" -0.20778289860701848 171.68768592490619 0 ;
 	setAttr ".sp" -type "double3" -0.20778289860701848 171.68768592490619 0 ;
@@ -577,7 +577,57 @@ createNode positionMarker -n "positionMarkerShape10" -p "positionMarker10";
 	setAttr ".uwo" yes;
 	setAttr ".lp" -type "double3" 1 0 0 ;
 	setAttr ".t" 120;
-createNode transform -n "LowerLip_crv" -p "FaceCurves_grp";
+createNode transform -n "locator1" -p "UpperLip_crv";
+	setAttr ".t" -type "double3" -6.2616136078871207 170.68708802173569 0.23601699254894726 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 0 0 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
+	setAttr ".smd" 7;
+createNode locator -n "locatorShape1" -p "locator1";
+	setAttr -k off ".v";
+createNode transform -n "locator2" -p "UpperLip_crv";
+	setAttr ".t" -type "double3" -3.4927860822535965 172.67920031710253 0.95304271618345382 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 0 0 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
+	setAttr ".smd" 7;
+createNode locator -n "locatorShape2" -p "locator2";
+	setAttr -k off ".v";
+createNode transform -n "locator3" -p "UpperLip_crv";
+	setAttr ".t" -type "double3" -0.0071666691024146328 173.12691763334641 1.0812782708098077 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 0 0 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
+	setAttr ".smd" 7;
+createNode locator -n "locatorShape3" -p "locator3";
+	setAttr -k off ".v";
+createNode transform -n "locator4" -p "UpperLip_crv";
+	setAttr ".t" -type "double3" 3.4748872954210261 172.69123893614753 0.93258730231594456 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 0 0 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
+	setAttr ".smd" 7;
+createNode locator -n "locatorShape4" -p "locator4";
+	setAttr -k off ".v";
+createNode transform -n "locator5" -p "UpperLip_crv";
+	setAttr ".t" -type "double3" 6.2702166513716238 170.70530629127055 0.23601699254894726 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 0 0 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
+	setAttr ".smd" 7;
+createNode locator -n "locatorShape5" -p "locator5";
+	setAttr -k off ".v";
+createNode transform -n "LowerLip_crv" -p "FaceCurves";
 	setAttr ".t" -type "double3" 0 0 33.250705890958976 ;
 	setAttr ".rp" -type "double3" -0.017679216501232276 167.90767223090137 0 ;
 	setAttr ".sp" -type "double3" -0.017679216501232276 167.90767223090137 0 ;
@@ -593,62 +643,7 @@ createNode nurbsCurve -n "LowerLip_crvShape" -p "LowerLip_crv";
 		4.4125286752390842 167.88537861817625 -0.87149861046088972
 		6.5823943350203384 168.774844891756 -2.5283199903901945
 		;
-createNode transform -n "positionMarker11" -p "LowerLip_crvShape";
-createNode positionMarker -n "positionMarkerShape11" -p "positionMarker11";
-	setAttr -k off ".v";
-	setAttr ".uwo" yes;
-	setAttr ".t" 1;
-createNode transform -n "positionMarker12" -p "LowerLip_crvShape";
-createNode positionMarker -n "positionMarkerShape12" -p "positionMarker12";
-	setAttr -k off ".v";
-	setAttr ".uwo" yes;
-	setAttr ".lp" -type "double3" 1 0 0 ;
-	setAttr ".t" 120;
-createNode transform -n "positionMarker13" -p "LowerLip_crvShape";
-createNode positionMarker -n "positionMarkerShape13" -p "positionMarker13";
-	setAttr -k off ".v";
-	setAttr ".uwo" yes;
-	setAttr ".t" 1;
-createNode transform -n "positionMarker14" -p "LowerLip_crvShape";
-createNode positionMarker -n "positionMarkerShape14" -p "positionMarker14";
-	setAttr -k off ".v";
-	setAttr ".uwo" yes;
-	setAttr ".lp" -type "double3" 1 0 0 ;
-	setAttr ".t" 120;
-createNode transform -n "positionMarker15" -p "LowerLip_crvShape";
-createNode positionMarker -n "positionMarkerShape15" -p "positionMarker15";
-	setAttr -k off ".v";
-	setAttr ".uwo" yes;
-	setAttr ".t" 1;
-createNode transform -n "positionMarker16" -p "LowerLip_crvShape";
-createNode positionMarker -n "positionMarkerShape16" -p "positionMarker16";
-	setAttr -k off ".v";
-	setAttr ".uwo" yes;
-	setAttr ".lp" -type "double3" 1 0 0 ;
-	setAttr ".t" 120;
-createNode transform -n "positionMarker17" -p "LowerLip_crvShape";
-createNode positionMarker -n "positionMarkerShape17" -p "positionMarker17";
-	setAttr -k off ".v";
-	setAttr ".uwo" yes;
-	setAttr ".t" 1;
-createNode transform -n "positionMarker18" -p "LowerLip_crvShape";
-createNode positionMarker -n "positionMarkerShape18" -p "positionMarker18";
-	setAttr -k off ".v";
-	setAttr ".uwo" yes;
-	setAttr ".lp" -type "double3" 1 0 0 ;
-	setAttr ".t" 120;
-createNode transform -n "positionMarker19" -p "LowerLip_crvShape";
-createNode positionMarker -n "positionMarkerShape19" -p "positionMarker19";
-	setAttr -k off ".v";
-	setAttr ".uwo" yes;
-	setAttr ".t" 1;
-createNode transform -n "positionMarker20" -p "LowerLip_crvShape";
-createNode positionMarker -n "positionMarkerShape20" -p "positionMarker20";
-	setAttr -k off ".v";
-	setAttr ".uwo" yes;
-	setAttr ".lp" -type "double3" 1 0 0 ;
-	setAttr ".t" 120;
-createNode transform -n "L_EyeBrow_crv" -p "FaceCurves_grp";
+createNode transform -n "L_EyeBrow_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" 9.7950655853167952 187.67165609765513 32.389991251961717 ;
 	setAttr ".sp" -type "double3" 9.7950655853167952 187.67165609765513 32.389991251961717 ;
 createNode nurbsCurve -n "L_EyeBrow_crvShape" -p "L_EyeBrow_crv";
@@ -662,7 +657,7 @@ createNode nurbsCurve -n "L_EyeBrow_crvShape" -p "L_EyeBrow_crv";
 		13.058677847448696 190.72480314555006 26.559829599993211
 		14.696170056937653 189.65352347962201 22.695891513264307
 		;
-createNode transform -n "L_LowerEyeLid_crv" -p "FaceCurves_grp";
+createNode transform -n "L_LowerEyeLid_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" 9.525173510137332 185.28616225753103 27.473857608302453 ;
 	setAttr ".sp" -type "double3" 9.525173510137332 185.28616225753103 27.473857608302453 ;
 createNode nurbsCurve -n "L_LowerEyeLid_crvShape" -p "L_LowerEyeLid_crv";
@@ -676,7 +671,7 @@ createNode nurbsCurve -n "L_LowerEyeLid_crvShape" -p "L_LowerEyeLid_crv";
 		11.389299844893062 185.03981105797928 23.324477039421197
 		12.013103690599456 185.83047736419203 21.615683104479885
 		;
-createNode transform -n "L_CheckBone_crv" -p "FaceCurves_grp";
+createNode transform -n "L_CheckBone_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" 10.036103510150607 183.94895925855513 27.622364946725714 ;
 	setAttr ".sp" -type "double3" 10.036103510150607 183.94895925855513 27.622364946725714 ;
 createNode nurbsCurve -n "L_CheckBone_crvShape" -p "L_CheckBone_crv";
@@ -691,7 +686,7 @@ createNode nurbsCurve -n "L_CheckBone_crvShape" -p "L_CheckBone_crv";
 		13.410634457823985 183.91642154712619 22.262151134677691
 		13.464198441120388 184.99345693283499 21.385378891671156
 		;
-createNode transform -n "L_Crease_crv" -p "FaceCurves_grp";
+createNode transform -n "L_Crease_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" 7.4918143035714753 176.07505371398395 29.174853033912171 ;
 	setAttr ".sp" -type "double3" 7.4918143035714753 176.07505371398395 29.174853033912171 ;
 createNode nurbsCurve -n "L_Crease_crvShape" -p "L_Crease_crv";
@@ -705,7 +700,7 @@ createNode nurbsCurve -n "L_Crease_crvShape" -p "L_Crease_crv";
 		7.3043403620340666 172.35235687488395 27.847074778798635
 		8.6069336640145764 169.04482365937884 30.102905648503423
 		;
-createNode transform -n "L_Cheek_crv" -p "FaceCurves_grp";
+createNode transform -n "L_Cheek_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" 14.963989973419665 172.4327028498285 22.092047762422276 ;
 	setAttr ".sp" -type "double3" 14.963989973419665 172.4327028498285 22.092047762422276 ;
 createNode nurbsCurve -n "L_Cheek_crvShape" -p "L_Cheek_crv";
@@ -720,7 +715,7 @@ createNode nurbsCurve -n "L_Cheek_crvShape" -p "L_Cheek_crv";
 		14.814590306413926 166.20521185965472 21.827452234503426
 		12.409907142490505 164.53201531360909 27.55835936571151
 		;
-createNode transform -n "R_EyeBrow_crv" -p "FaceCurves_grp";
+createNode transform -n "R_EyeBrow_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" -9.7950655853167987 187.67165609765513 32.389991251961717 ;
 	setAttr ".sp" -type "double3" -9.7950655853167987 187.67165609765513 32.389991251961717 ;
 createNode nurbsCurve -n "R_EyeBrow_crvShape" -p "R_EyeBrow_crv";
@@ -734,7 +729,7 @@ createNode nurbsCurve -n "R_EyeBrow_crvShape" -p "R_EyeBrow_crv";
 		-13.058677847448699 190.72480314555006 26.559829599993211
 		-14.696170056937657 189.65352347962201 22.695891513264304
 		;
-createNode transform -n "R_LowerEyeLid_crv" -p "FaceCurves_grp";
+createNode transform -n "R_LowerEyeLid_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" -9.5251735101373356 185.28616225753103 27.473857608302453 ;
 	setAttr ".sp" -type "double3" -9.5251735101373356 185.28616225753103 27.473857608302453 ;
 createNode nurbsCurve -n "R_LowerEyeLid_crvShape" -p "R_LowerEyeLid_crv";
@@ -748,7 +743,7 @@ createNode nurbsCurve -n "R_LowerEyeLid_crvShape" -p "R_LowerEyeLid_crv";
 		-11.389299844893065 185.03981105797928 23.324477039421197
 		-12.013103690599458 185.83047736419203 21.615683104479885
 		;
-createNode transform -n "R_CheckBone_crv" -p "FaceCurves_grp";
+createNode transform -n "R_CheckBone_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" -10.03610351015061 183.94895925855513 27.622364946725714 ;
 	setAttr ".sp" -type "double3" -10.03610351015061 183.94895925855513 27.622364946725714 ;
 createNode nurbsCurve -n "R_CheckBone_crvShape" -p "R_CheckBone_crv";
@@ -763,7 +758,7 @@ createNode nurbsCurve -n "R_CheckBone_crvShape" -p "R_CheckBone_crv";
 		-13.410634457823988 183.91642154712619 22.262151134677691
 		-13.46419844112039 184.99345693283499 21.385378891671156
 		;
-createNode transform -n "R_Crease_crv" -p "FaceCurves_grp";
+createNode transform -n "R_Crease_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" -7.4918143035714788 176.07505371398395 29.174853033912171 ;
 	setAttr ".sp" -type "double3" -7.4918143035714788 176.07505371398395 29.174853033912171 ;
 createNode nurbsCurve -n "R_Crease_crvShape" -p "R_Crease_crv";
@@ -777,7 +772,7 @@ createNode nurbsCurve -n "R_Crease_crvShape" -p "R_Crease_crv";
 		-7.3043403620340701 172.35235687488395 27.847074778798635
 		-8.6069336640145799 169.04482365937884 30.102905648503423
 		;
-createNode transform -n "R_Cheek_crv" -p "FaceCurves_grp";
+createNode transform -n "R_Cheek_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" -14.963989973419668 172.4327028498285 22.092047762422268 ;
 	setAttr ".sp" -type "double3" -14.963989973419668 172.4327028498285 22.092047762422268 ;
 createNode nurbsCurve -n "R_Cheek_crvShape" -p "R_Cheek_crv";
@@ -792,7 +787,7 @@ createNode nurbsCurve -n "R_Cheek_crvShape" -p "R_Cheek_crv";
 		-14.81459030641393 166.20521185965472 21.827452234503419
 		-12.409907142490509 164.53201531360909 27.558359365711507
 		;
-createNode transform -n "L_UpperEyeLid_crv" -p "FaceCurves_grp";
+createNode transform -n "L_UpperEyeLid_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" 9.3272266524769716 185.84191195641893 25.716395770211363 ;
 	setAttr ".sp" -type "double3" 9.3272266524769716 185.84191195641893 25.716395770211363 ;
 createNode nurbsCurve -n "L_UpperEyeLid_crvShape" -p "L_UpperEyeLid_crv";
@@ -806,7 +801,7 @@ createNode nurbsCurve -n "L_UpperEyeLid_crvShape" -p "L_UpperEyeLid_crv";
 		11.180274510029175 186.11181058050875 23.094573310153095
 		12.028184079913757 186.14087570867673 21.879208439458253
 		;
-createNode transform -n "R_UpperEyeLid_crv" -p "FaceCurves_grp";
+createNode transform -n "R_UpperEyeLid_crv" -p "FaceCurves";
 	setAttr ".rp" -type "double3" -9.3272266524769751 185.84191195641893 25.716395770211363 ;
 	setAttr ".sp" -type "double3" -9.3272266524769751 185.84191195641893 25.716395770211363 ;
 createNode nurbsCurve -n "R_UpperEyeLid_crvShape" -p "R_UpperEyeLid_crv";
@@ -820,105 +815,6 @@ createNode nurbsCurve -n "R_UpperEyeLid_crvShape" -p "R_UpperEyeLid_crv";
 		-11.180274510029179 186.11181058050875 23.094573310153095
 		-12.028184079913759 186.14087570867673 21.879208439458253
 		;
-createNode transform -n "Locator_grp";
-	setAttr ".t" -type "double3" 0 0 29.379444697319691 ;
-createNode transform -n "UpperLip_loc01" -p "Locator_grp";
-	setAttr ".t" -type "double3" -6.2616136078871207 170.68708802173569 0.23601699254894726 ;
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".smd" 7;
-createNode locator -n "UpperLip_loc0Shape1" -p "UpperLip_loc01";
-	setAttr -k off ".v";
-createNode transform -n "UpperLip_loc02" -p "Locator_grp";
-	setAttr ".t" -type "double3" -3.4927860822535965 172.67920031710253 0.95304271618345382 ;
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".smd" 7;
-createNode locator -n "UpperLip_loc0Shape2" -p "UpperLip_loc02";
-	setAttr -k off ".v";
-createNode transform -n "UpperLip_loc03" -p "Locator_grp";
-	setAttr ".t" -type "double3" -0.0071666691024146328 173.12691763334641 1.0812782708098077 ;
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".smd" 7;
-createNode locator -n "UpperLip_loc0Shape3" -p "UpperLip_loc03";
-	setAttr -k off ".v";
-createNode transform -n "UpperLip_loc04" -p "Locator_grp";
-	setAttr ".t" -type "double3" 3.4748872954210261 172.69123893614753 0.93258730231594456 ;
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".smd" 7;
-createNode locator -n "UpperLip_loc0Shape4" -p "UpperLip_loc04";
-	setAttr -k off ".v";
-createNode transform -n "UpperLip_loc05" -p "Locator_grp";
-	setAttr ".t" -type "double3" 6.2702166513716238 170.70530629127055 0.23601699254894726 ;
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".smd" 7;
-createNode locator -n "UpperLip_loc0Shape5" -p "UpperLip_loc05";
-	setAttr -k off ".v";
-createNode transform -n "LowerLip_loc01" -p "Locator_grp";
-	setAttr ".t" -type "double3" -6.6177527680228057 168.82197476294473 1.3429412032490902 ;
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".smd" 7;
-createNode locator -n "LowerLip_loc0Shape1" -p "LowerLip_loc01";
-	setAttr -k off ".v";
-createNode transform -n "LowerLip_loc02" -p "Locator_grp";
-	setAttr ".t" -type "double3" -3.5673133686331644 167.95612497885838 3.0292712099952155 ;
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".smd" 7;
-createNode locator -n "LowerLip_loc0Shape2" -p "LowerLip_loc02";
-	setAttr -k off ".v";
-createNode transform -n "LowerLip_loc03" -p "Locator_grp";
-	setAttr ".t" -type "double3" -0.026913614432166125 167.77922768758648 3.619666867000447 ;
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".smd" 7;
-createNode locator -n "LowerLip_loc0Shape3" -p "LowerLip_loc03";
-	setAttr -k off ".v";
-createNode transform -n "LowerLip_loc04" -p "Locator_grp";
-	setAttr ".t" -type "double3" 3.5127905905322727 167.97446086402221 3.0331879402063819 ;
-	setAttr -av ".tz";
-	setAttr ".s" -type "double3" 1 0.99999999999999989 0.99999999999999989 ;
-	setAttr ".smd" 7;
-createNode locator -n "LowerLip_loc0Shape4" -p "LowerLip_loc04";
-	setAttr -k off ".v";
-createNode transform -n "LowerLip_loc05" -p "Locator_grp";
-	setAttr ".t" -type "double3" 6.5823943350203384 168.774844891756 1.3429412032490902 ;
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
-	setAttr ".smd" 7;
-createNode locator -n "LowerLip_loc0Shape5" -p "LowerLip_loc05";
-	setAttr -k off ".v";
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 createNode mentalrayOptions -s -n "miDefaultOptions";
@@ -1132,7 +1028,7 @@ createNode reference -n "Orc_UV_sRN";
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Eyes|Orc_UV_s:L_eye" "displayLocalAxis" " 0"
 		
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Eyes|Orc_UV_s:L_eye|Orc_UV_s:pSphere2" "scale" 
-		" -type \"double3\" 1 1 1"
+		" -type \"double3\" 1.02293569762465353 1.02293569762465353 1.02293569762465353"
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Eyes|Orc_UV_s:L_eye|Orc_UV_s:pSphere2" "rotatePivot" 
 		" -type \"double3\" 0 0 0"
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Eyes|Orc_UV_s:L_eye|Orc_UV_s:pSphere2" "scalePivot" 
@@ -1250,21 +1146,21 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n"
 		+ "                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 0.61137\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -currentNode \"LowerLip_crv\" \n                -opaqueContainers 0\n                -dropTargetNode \"Locator_grp\" \n                -dropNode \"LowerLip_loc05\" \n"
-		+ "                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 0.61137\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n"
-		+ "                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -currentNode \"LowerLip_crv\" \n                -opaqueContainers 0\n                -dropTargetNode \"Locator_grp\" \n                -dropNode \"LowerLip_loc05\" \n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n"
-		+ "\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
-		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n"
-		+ "                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n"
-		+ "                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n"
-		+ "            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n"
-		+ "                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 0.540269\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -currentNode \"UpperLip_crv\" \n                -opaqueContainers 0\n                -dropTargetNode \"UpperLip_crv\" \n                -dropNode \"locator5\" \n"
+		+ "                -feedbackNode \"|HeadBase_jnt01|UpperHead_jnt01|L_eye_jnt01\" \n                -feedbackGadget \"Joint\" \n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 0.540269\n                -animateTransition 0\n"
+		+ "                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -currentNode \"UpperLip_crv\" \n                -opaqueContainers 0\n                -dropTargetNode \"UpperLip_crv\" \n                -dropNode \"locator5\" \n                -feedbackNode \"|HeadBase_jnt01|UpperHead_jnt01|L_eye_jnt01\" \n                -feedbackGadget \"Joint\" \n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
+		+ "                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n"
+		+ "                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n"
+		+ "                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
+		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n"
+		+ "                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 1\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 4 4 \\n    -bumpResolution 4 4 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 1\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 4 4 \\n    -bumpResolution 4 4 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -1376,80 +1272,6 @@ createNode animCurveTL -n "motionPath5_uValue";
 createNode addDoubleLinear -n "addDoubleLinear13";
 createNode addDoubleLinear -n "addDoubleLinear14";
 createNode addDoubleLinear -n "addDoubleLinear15";
-createNode motionPath -n "motionPath6";
-	setAttr -s 2 ".pmt";
-	setAttr -s 2 ".pmt";
-	setAttr ".f" yes;
-	setAttr ".fa" 0;
-	setAttr ".ua" 1;
-	setAttr ".fm" yes;
-createNode animCurveTL -n "motionPath6_uValue";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
-createNode addDoubleLinear -n "addDoubleLinear16";
-createNode addDoubleLinear -n "addDoubleLinear17";
-createNode addDoubleLinear -n "addDoubleLinear18";
-createNode motionPath -n "motionPath7";
-	setAttr -av ".u" 0.25;
-	setAttr -s 2 ".pmt";
-	setAttr -s 2 ".pmt";
-	setAttr ".f" yes;
-	setAttr ".fa" 0;
-	setAttr ".ua" 1;
-	setAttr ".fm" yes;
-createNode animCurveTL -n "motionPath7_uValue";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
-createNode addDoubleLinear -n "addDoubleLinear19";
-createNode addDoubleLinear -n "addDoubleLinear20";
-createNode addDoubleLinear -n "addDoubleLinear21";
-createNode motionPath -n "motionPath8";
-	setAttr -av ".u" 0.5;
-	setAttr -s 2 ".pmt";
-	setAttr -s 2 ".pmt";
-	setAttr ".f" yes;
-	setAttr ".fa" 0;
-	setAttr ".ua" 1;
-	setAttr ".fm" yes;
-createNode animCurveTL -n "motionPath8_uValue";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
-createNode addDoubleLinear -n "addDoubleLinear22";
-createNode addDoubleLinear -n "addDoubleLinear23";
-createNode addDoubleLinear -n "addDoubleLinear24";
-createNode motionPath -n "motionPath9";
-	setAttr -av ".u" 0.75;
-	setAttr -s 2 ".pmt";
-	setAttr -s 2 ".pmt";
-	setAttr ".f" yes;
-	setAttr ".fa" 0;
-	setAttr ".ua" 1;
-	setAttr ".fm" yes;
-createNode animCurveTL -n "motionPath9_uValue";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
-createNode addDoubleLinear -n "addDoubleLinear25";
-createNode addDoubleLinear -n "addDoubleLinear26";
-createNode addDoubleLinear -n "addDoubleLinear27";
-createNode motionPath -n "motionPath10";
-	setAttr -av ".u" 1;
-	setAttr -s 2 ".pmt";
-	setAttr -s 2 ".pmt";
-	setAttr ".f" yes;
-	setAttr ".fa" 0;
-	setAttr ".ua" 1;
-	setAttr ".fm" yes;
-createNode animCurveTL -n "motionPath10_uValue";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
-createNode addDoubleLinear -n "addDoubleLinear28";
-createNode addDoubleLinear -n "addDoubleLinear29";
-createNode addDoubleLinear -n "addDoubleLinear30";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -1603,7 +1425,10 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr -k on ".aap";
 	setAttr -k on ".gh";
 	setAttr -cb on ".sd";
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 select -ne :hyperGraphLayout;
+	setAttr -s 3 ".hyp";
 	setAttr ".hyp[461].isc" yes;
 connectAttr "BodyMesh.di" "Orc_UV_sRN.phl[25]";
 connectAttr "Pants.di" "Orc_UV_sRN.phl[26]";
@@ -1678,86 +1503,46 @@ connectAttr "L_ball_jnt01.s" "L_toe_jnt01.is";
 connectAttr "L_hip_jnt01.s" "L_Buttock_jnt01.is";
 connectAttr "NoseBase_jnt01.s" "NoseTip_jnt01.is";
 connectAttr "LowerJaw_jnt01.s" "LowerJaw_jnt02.is";
-connectAttr "addDoubleLinear3.o" "UpperLip_loc01.tz";
-connectAttr "addDoubleLinear1.o" "UpperLip_loc01.tx";
-connectAttr "addDoubleLinear2.o" "UpperLip_loc01.ty";
-connectAttr "motionPath1.rx" "UpperLip_loc01.rx";
-connectAttr "motionPath1.ry" "UpperLip_loc01.ry";
-connectAttr "motionPath1.rz" "UpperLip_loc01.rz";
-connectAttr "motionPath1.msg" "UpperLip_loc01.sml";
-connectAttr "motionPath1.ro" "UpperLip_loc01.ro";
-connectAttr "addDoubleLinear6.o" "UpperLip_loc02.tz";
-connectAttr "addDoubleLinear4.o" "UpperLip_loc02.tx";
-connectAttr "addDoubleLinear5.o" "UpperLip_loc02.ty";
-connectAttr "motionPath2.rx" "UpperLip_loc02.rx";
-connectAttr "motionPath2.ry" "UpperLip_loc02.ry";
-connectAttr "motionPath2.rz" "UpperLip_loc02.rz";
-connectAttr "motionPath2.msg" "UpperLip_loc02.sml";
-connectAttr "motionPath2.ro" "UpperLip_loc02.ro";
-connectAttr "addDoubleLinear9.o" "UpperLip_loc03.tz";
-connectAttr "addDoubleLinear7.o" "UpperLip_loc03.tx";
-connectAttr "addDoubleLinear8.o" "UpperLip_loc03.ty";
-connectAttr "motionPath3.rx" "UpperLip_loc03.rx";
-connectAttr "motionPath3.ry" "UpperLip_loc03.ry";
-connectAttr "motionPath3.rz" "UpperLip_loc03.rz";
-connectAttr "motionPath3.msg" "UpperLip_loc03.sml";
-connectAttr "motionPath3.ro" "UpperLip_loc03.ro";
-connectAttr "addDoubleLinear12.o" "UpperLip_loc04.tz";
-connectAttr "addDoubleLinear10.o" "UpperLip_loc04.tx";
-connectAttr "addDoubleLinear11.o" "UpperLip_loc04.ty";
-connectAttr "motionPath4.rx" "UpperLip_loc04.rx";
-connectAttr "motionPath4.ry" "UpperLip_loc04.ry";
-connectAttr "motionPath4.rz" "UpperLip_loc04.rz";
-connectAttr "motionPath4.msg" "UpperLip_loc04.sml";
-connectAttr "motionPath4.ro" "UpperLip_loc04.ro";
-connectAttr "addDoubleLinear15.o" "UpperLip_loc05.tz";
-connectAttr "addDoubleLinear13.o" "UpperLip_loc05.tx";
-connectAttr "addDoubleLinear14.o" "UpperLip_loc05.ty";
-connectAttr "motionPath5.rx" "UpperLip_loc05.rx";
-connectAttr "motionPath5.ry" "UpperLip_loc05.ry";
-connectAttr "motionPath5.rz" "UpperLip_loc05.rz";
-connectAttr "motionPath5.msg" "UpperLip_loc05.sml";
-connectAttr "motionPath5.ro" "UpperLip_loc05.ro";
-connectAttr "addDoubleLinear16.o" "LowerLip_loc01.tx";
-connectAttr "addDoubleLinear17.o" "LowerLip_loc01.ty";
-connectAttr "addDoubleLinear18.o" "LowerLip_loc01.tz";
-connectAttr "motionPath6.msg" "LowerLip_loc01.sml";
-connectAttr "motionPath6.rx" "LowerLip_loc01.rx";
-connectAttr "motionPath6.ry" "LowerLip_loc01.ry";
-connectAttr "motionPath6.rz" "LowerLip_loc01.rz";
-connectAttr "motionPath6.ro" "LowerLip_loc01.ro";
-connectAttr "addDoubleLinear19.o" "LowerLip_loc02.tx";
-connectAttr "addDoubleLinear20.o" "LowerLip_loc02.ty";
-connectAttr "addDoubleLinear21.o" "LowerLip_loc02.tz";
-connectAttr "motionPath7.msg" "LowerLip_loc02.sml";
-connectAttr "motionPath7.rx" "LowerLip_loc02.rx";
-connectAttr "motionPath7.ry" "LowerLip_loc02.ry";
-connectAttr "motionPath7.rz" "LowerLip_loc02.rz";
-connectAttr "motionPath7.ro" "LowerLip_loc02.ro";
-connectAttr "addDoubleLinear22.o" "LowerLip_loc03.tx";
-connectAttr "addDoubleLinear23.o" "LowerLip_loc03.ty";
-connectAttr "addDoubleLinear24.o" "LowerLip_loc03.tz";
-connectAttr "motionPath8.msg" "LowerLip_loc03.sml";
-connectAttr "motionPath8.rx" "LowerLip_loc03.rx";
-connectAttr "motionPath8.ry" "LowerLip_loc03.ry";
-connectAttr "motionPath8.rz" "LowerLip_loc03.rz";
-connectAttr "motionPath8.ro" "LowerLip_loc03.ro";
-connectAttr "addDoubleLinear25.o" "LowerLip_loc04.tx";
-connectAttr "addDoubleLinear26.o" "LowerLip_loc04.ty";
-connectAttr "addDoubleLinear27.o" "LowerLip_loc04.tz";
-connectAttr "motionPath9.msg" "LowerLip_loc04.sml";
-connectAttr "motionPath9.rx" "LowerLip_loc04.rx";
-connectAttr "motionPath9.ry" "LowerLip_loc04.ry";
-connectAttr "motionPath9.rz" "LowerLip_loc04.rz";
-connectAttr "motionPath9.ro" "LowerLip_loc04.ro";
-connectAttr "addDoubleLinear28.o" "LowerLip_loc05.tx";
-connectAttr "addDoubleLinear29.o" "LowerLip_loc05.ty";
-connectAttr "addDoubleLinear30.o" "LowerLip_loc05.tz";
-connectAttr "motionPath10.msg" "LowerLip_loc05.sml";
-connectAttr "motionPath10.rx" "LowerLip_loc05.rx";
-connectAttr "motionPath10.ry" "LowerLip_loc05.ry";
-connectAttr "motionPath10.rz" "LowerLip_loc05.rz";
-connectAttr "motionPath10.ro" "LowerLip_loc05.ro";
+connectAttr "addDoubleLinear1.o" "locator1.tx";
+connectAttr "addDoubleLinear2.o" "locator1.ty";
+connectAttr "addDoubleLinear3.o" "locator1.tz";
+connectAttr "motionPath1.msg" "locator1.sml";
+connectAttr "motionPath1.rx" "locator1.rx";
+connectAttr "motionPath1.ry" "locator1.ry";
+connectAttr "motionPath1.rz" "locator1.rz";
+connectAttr "motionPath1.ro" "locator1.ro";
+connectAttr "addDoubleLinear4.o" "locator2.tx";
+connectAttr "addDoubleLinear5.o" "locator2.ty";
+connectAttr "addDoubleLinear6.o" "locator2.tz";
+connectAttr "motionPath2.msg" "locator2.sml";
+connectAttr "motionPath2.rx" "locator2.rx";
+connectAttr "motionPath2.ry" "locator2.ry";
+connectAttr "motionPath2.rz" "locator2.rz";
+connectAttr "motionPath2.ro" "locator2.ro";
+connectAttr "addDoubleLinear7.o" "locator3.tx";
+connectAttr "addDoubleLinear8.o" "locator3.ty";
+connectAttr "addDoubleLinear9.o" "locator3.tz";
+connectAttr "motionPath3.msg" "locator3.sml";
+connectAttr "motionPath3.rx" "locator3.rx";
+connectAttr "motionPath3.ry" "locator3.ry";
+connectAttr "motionPath3.rz" "locator3.rz";
+connectAttr "motionPath3.ro" "locator3.ro";
+connectAttr "addDoubleLinear10.o" "locator4.tx";
+connectAttr "addDoubleLinear11.o" "locator4.ty";
+connectAttr "addDoubleLinear12.o" "locator4.tz";
+connectAttr "motionPath4.msg" "locator4.sml";
+connectAttr "motionPath4.rx" "locator4.rx";
+connectAttr "motionPath4.ry" "locator4.ry";
+connectAttr "motionPath4.rz" "locator4.rz";
+connectAttr "motionPath4.ro" "locator4.ro";
+connectAttr "addDoubleLinear13.o" "locator5.tx";
+connectAttr "addDoubleLinear14.o" "locator5.ty";
+connectAttr "addDoubleLinear15.o" "locator5.tz";
+connectAttr "motionPath5.msg" "locator5.sml";
+connectAttr "motionPath5.rx" "locator5.rx";
+connectAttr "motionPath5.ry" "locator5.ry";
+connectAttr "motionPath5.rz" "locator5.rz";
+connectAttr "motionPath5.ro" "locator5.ro";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
@@ -1784,102 +1569,52 @@ connectAttr "motionPath1_uValue.o" "motionPath1.u";
 connectAttr "UpperLip_crvShape.ws" "motionPath1.gp";
 connectAttr "positionMarkerShape1.t" "motionPath1.pmt[0]";
 connectAttr "positionMarkerShape2.t" "motionPath1.pmt[1]";
-connectAttr "UpperLip_loc01.tmrx" "addDoubleLinear1.i1";
+connectAttr "locator1.tmrx" "addDoubleLinear1.i1";
 connectAttr "motionPath1.xc" "addDoubleLinear1.i2";
-connectAttr "UpperLip_loc01.tmry" "addDoubleLinear2.i1";
+connectAttr "locator1.tmry" "addDoubleLinear2.i1";
 connectAttr "motionPath1.yc" "addDoubleLinear2.i2";
-connectAttr "UpperLip_loc01.tmrz" "addDoubleLinear3.i1";
+connectAttr "locator1.tmrz" "addDoubleLinear3.i1";
 connectAttr "motionPath1.zc" "addDoubleLinear3.i2";
 connectAttr "motionPath2_uValue.o" "motionPath2.u";
 connectAttr "UpperLip_crvShape.ws" "motionPath2.gp";
 connectAttr "positionMarkerShape3.t" "motionPath2.pmt[0]";
 connectAttr "positionMarkerShape4.t" "motionPath2.pmt[1]";
-connectAttr "UpperLip_loc02.tmrx" "addDoubleLinear4.i1";
+connectAttr "locator2.tmrx" "addDoubleLinear4.i1";
 connectAttr "motionPath2.xc" "addDoubleLinear4.i2";
-connectAttr "UpperLip_loc02.tmry" "addDoubleLinear5.i1";
+connectAttr "locator2.tmry" "addDoubleLinear5.i1";
 connectAttr "motionPath2.yc" "addDoubleLinear5.i2";
-connectAttr "UpperLip_loc02.tmrz" "addDoubleLinear6.i1";
+connectAttr "locator2.tmrz" "addDoubleLinear6.i1";
 connectAttr "motionPath2.zc" "addDoubleLinear6.i2";
 connectAttr "motionPath3_uValue.o" "motionPath3.u";
 connectAttr "UpperLip_crvShape.ws" "motionPath3.gp";
 connectAttr "positionMarkerShape5.t" "motionPath3.pmt[0]";
 connectAttr "positionMarkerShape6.t" "motionPath3.pmt[1]";
-connectAttr "UpperLip_loc03.tmrx" "addDoubleLinear7.i1";
+connectAttr "locator3.tmrx" "addDoubleLinear7.i1";
 connectAttr "motionPath3.xc" "addDoubleLinear7.i2";
-connectAttr "UpperLip_loc03.tmry" "addDoubleLinear8.i1";
+connectAttr "locator3.tmry" "addDoubleLinear8.i1";
 connectAttr "motionPath3.yc" "addDoubleLinear8.i2";
-connectAttr "UpperLip_loc03.tmrz" "addDoubleLinear9.i1";
+connectAttr "locator3.tmrz" "addDoubleLinear9.i1";
 connectAttr "motionPath3.zc" "addDoubleLinear9.i2";
 connectAttr "motionPath4_uValue.o" "motionPath4.u";
 connectAttr "UpperLip_crvShape.ws" "motionPath4.gp";
 connectAttr "positionMarkerShape7.t" "motionPath4.pmt[0]";
 connectAttr "positionMarkerShape8.t" "motionPath4.pmt[1]";
-connectAttr "UpperLip_loc04.tmrx" "addDoubleLinear10.i1";
+connectAttr "locator4.tmrx" "addDoubleLinear10.i1";
 connectAttr "motionPath4.xc" "addDoubleLinear10.i2";
-connectAttr "UpperLip_loc04.tmry" "addDoubleLinear11.i1";
+connectAttr "locator4.tmry" "addDoubleLinear11.i1";
 connectAttr "motionPath4.yc" "addDoubleLinear11.i2";
-connectAttr "UpperLip_loc04.tmrz" "addDoubleLinear12.i1";
+connectAttr "locator4.tmrz" "addDoubleLinear12.i1";
 connectAttr "motionPath4.zc" "addDoubleLinear12.i2";
 connectAttr "motionPath5_uValue.o" "motionPath5.u";
 connectAttr "UpperLip_crvShape.ws" "motionPath5.gp";
 connectAttr "positionMarkerShape9.t" "motionPath5.pmt[0]";
 connectAttr "positionMarkerShape10.t" "motionPath5.pmt[1]";
-connectAttr "UpperLip_loc05.tmrx" "addDoubleLinear13.i1";
+connectAttr "locator5.tmrx" "addDoubleLinear13.i1";
 connectAttr "motionPath5.xc" "addDoubleLinear13.i2";
-connectAttr "UpperLip_loc05.tmry" "addDoubleLinear14.i1";
+connectAttr "locator5.tmry" "addDoubleLinear14.i1";
 connectAttr "motionPath5.yc" "addDoubleLinear14.i2";
-connectAttr "UpperLip_loc05.tmrz" "addDoubleLinear15.i1";
+connectAttr "locator5.tmrz" "addDoubleLinear15.i1";
 connectAttr "motionPath5.zc" "addDoubleLinear15.i2";
-connectAttr "motionPath6_uValue.o" "motionPath6.u";
-connectAttr "LowerLip_crvShape.ws" "motionPath6.gp";
-connectAttr "positionMarkerShape11.t" "motionPath6.pmt[0]";
-connectAttr "positionMarkerShape12.t" "motionPath6.pmt[1]";
-connectAttr "LowerLip_loc01.tmrx" "addDoubleLinear16.i1";
-connectAttr "motionPath6.xc" "addDoubleLinear16.i2";
-connectAttr "LowerLip_loc01.tmry" "addDoubleLinear17.i1";
-connectAttr "motionPath6.yc" "addDoubleLinear17.i2";
-connectAttr "LowerLip_loc01.tmrz" "addDoubleLinear18.i1";
-connectAttr "motionPath6.zc" "addDoubleLinear18.i2";
-connectAttr "motionPath7_uValue.o" "motionPath7.u";
-connectAttr "LowerLip_crvShape.ws" "motionPath7.gp";
-connectAttr "positionMarkerShape13.t" "motionPath7.pmt[0]";
-connectAttr "positionMarkerShape14.t" "motionPath7.pmt[1]";
-connectAttr "LowerLip_loc02.tmrx" "addDoubleLinear19.i1";
-connectAttr "motionPath7.xc" "addDoubleLinear19.i2";
-connectAttr "LowerLip_loc02.tmry" "addDoubleLinear20.i1";
-connectAttr "motionPath7.yc" "addDoubleLinear20.i2";
-connectAttr "LowerLip_loc02.tmrz" "addDoubleLinear21.i1";
-connectAttr "motionPath7.zc" "addDoubleLinear21.i2";
-connectAttr "motionPath8_uValue.o" "motionPath8.u";
-connectAttr "LowerLip_crvShape.ws" "motionPath8.gp";
-connectAttr "positionMarkerShape15.t" "motionPath8.pmt[0]";
-connectAttr "positionMarkerShape16.t" "motionPath8.pmt[1]";
-connectAttr "LowerLip_loc03.tmrx" "addDoubleLinear22.i1";
-connectAttr "motionPath8.xc" "addDoubleLinear22.i2";
-connectAttr "LowerLip_loc03.tmry" "addDoubleLinear23.i1";
-connectAttr "motionPath8.yc" "addDoubleLinear23.i2";
-connectAttr "LowerLip_loc03.tmrz" "addDoubleLinear24.i1";
-connectAttr "motionPath8.zc" "addDoubleLinear24.i2";
-connectAttr "motionPath9_uValue.o" "motionPath9.u";
-connectAttr "LowerLip_crvShape.ws" "motionPath9.gp";
-connectAttr "positionMarkerShape17.t" "motionPath9.pmt[0]";
-connectAttr "positionMarkerShape18.t" "motionPath9.pmt[1]";
-connectAttr "LowerLip_loc04.tmrx" "addDoubleLinear25.i1";
-connectAttr "motionPath9.xc" "addDoubleLinear25.i2";
-connectAttr "LowerLip_loc04.tmry" "addDoubleLinear26.i1";
-connectAttr "motionPath9.yc" "addDoubleLinear26.i2";
-connectAttr "LowerLip_loc04.tmrz" "addDoubleLinear27.i1";
-connectAttr "motionPath9.zc" "addDoubleLinear27.i2";
-connectAttr "motionPath10_uValue.o" "motionPath10.u";
-connectAttr "LowerLip_crvShape.ws" "motionPath10.gp";
-connectAttr "positionMarkerShape19.t" "motionPath10.pmt[0]";
-connectAttr "positionMarkerShape20.t" "motionPath10.pmt[1]";
-connectAttr "LowerLip_loc05.tmrx" "addDoubleLinear28.i1";
-connectAttr "motionPath10.xc" "addDoubleLinear28.i2";
-connectAttr "LowerLip_loc05.tmry" "addDoubleLinear29.i1";
-connectAttr "motionPath10.yc" "addDoubleLinear29.i2";
-connectAttr "LowerLip_loc05.tmrz" "addDoubleLinear30.i1";
-connectAttr "motionPath10.zc" "addDoubleLinear30.i2";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "L_thumb_jnt05.msg" ":hyperGraphLayout.hyp[461].dn";
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";

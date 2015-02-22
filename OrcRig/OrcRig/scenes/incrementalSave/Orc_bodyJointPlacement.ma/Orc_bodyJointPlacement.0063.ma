@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: Orc_bodyJointPlacement.ma
-//Last modified: Sat, Feb 21, 2015 10:29:41 PM
+//Last modified: Sat, Feb 21, 2015 10:25:07 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Orc_UV_s" -rfn "Orc_UV_sRN" -op "VERS|2015|UVER|undef|MADE|undef|CHNG|Sat, Feb 21, 2015 09:50:11 PM|ICON|undef|INFO|undef|OBJN|252|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 "/Users/Samantha/Desktop/My Portfolio/OrcRig/OrcRig//scenes/Orc_UV's.mb";
@@ -18,12 +18,12 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 40.734689648038028 179.12216272027456 213.98986843764274 ;
-	setAttr ".r" -type "double3" -5.1383527295651952 2173.3999999996699 2.0434785858085101e-16 ;
+	setAttr ".t" -type "double3" 17.082158376650774 186.2971638700345 97.881707631296948 ;
+	setAttr ".r" -type "double3" -15.338352729553678 2172.9999999997822 4.0802704183058066e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 189.76709109789081;
+	setAttr ".coi" 107.41957709468727;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1132,7 +1132,7 @@ createNode reference -n "Orc_UV_sRN";
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Eyes|Orc_UV_s:L_eye" "displayLocalAxis" " 0"
 		
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Eyes|Orc_UV_s:L_eye|Orc_UV_s:pSphere2" "scale" 
-		" -type \"double3\" 1 1 1"
+		" -type \"double3\" 1.02293569762465353 1.02293569762465353 1.02293569762465353"
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Eyes|Orc_UV_s:L_eye|Orc_UV_s:pSphere2" "rotatePivot" 
 		" -type \"double3\" 0 0 0"
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Eyes|Orc_UV_s:L_eye|Orc_UV_s:pSphere2" "scalePivot" 
