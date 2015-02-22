@@ -1,0 +1,35 @@
+/*
+
+This script will rename groups of all selected finger controls and recolor those controls.
+
+Instructions: select finger controls and run code.
+
+*/
+
+//Store selection
+string $control[] = `ls -sl`;
+
+//'For' loop - for all items in our selection, run the following commands...
+for ($all in $control){
+    //Select each item...
+    select $all;
+    //Move up to group directly above item...
+    pickWalk -d up;
+    //Store the selected group...
+    string $sel_grpSDK[] = `ls -sl`;
+    //Rename the group to "grpSDK" + the name of the selected item...
+    rename $sel_grpSDK[0] ("grpSDK_" + $all);
+    //Move up one more level...
+    pickWalk -d up;
+    //Store the selected group...
+    string $sel_grpOri[] = `ls -sl`;
+    //Rename the group to "grpOri" + the name of the selected item...
+    rename $sel_grpOri[0] ("grpOri_" + $all);
+    //Find the shape node of all selected items...
+    string $all_shp[] = `listRelatives -type shape $all`;
+    //Enable the Override property on all selected items...
+    setAttr ($all_shp[0] + ".overrideEnabled") 1;
+    //Finally, change the color of all selected items.  17 = yellow | 18 = light blue
+    setAttr ($all_shp[0] + ".overrideColor") 17;
+    
+}

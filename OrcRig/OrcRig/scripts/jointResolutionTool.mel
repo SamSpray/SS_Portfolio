@@ -1,0 +1,85 @@
+//Prevent duplication of window...
+if (`window -ex jntChnRes_win`){
+    deleteUI -window jntChnRes_win;
+}
+
+//Create window...
+window -t "Joint Chain Resolution" -wh 300 100 -s true jntChnRes_win;
+
+//Use an adjustable column layout for the window...
+columnLayout -adj true myColumn;
+
+//Add instructions to the window...
+text -l "Instructions: select bone to segment" -p myColumn;
+
+//Add a separator...
+separator;
+
+//Create a Text Field Button Group that will allow user to choose a resolution amount...
+textFieldButtonGrp -l "Number of Joints?" -bl "CREATE" -bc "jntChnRes_go" myTextFieldBtnGrp;
+
+//Show window...
+showWindow jntChnRes_win;
+
+//Use this Global Procedure to run the Joint Segmenter once "CREATE" is clicked on the UI...
+global proc jntChnRes_go(){
+
+    //Get source joint...
+    string $selSrcJnt[] = `ls -sl`;
+    
+    //Make sure a bone is selected, and not just a joint...
+    select -hi;
+    
+    string $findSelAmount[] = `ls -sl`;
+    
+    if (size($findSelAmount) < 2){
+        warning "Must select a bone.";
+        
+    //If a bone is selected, run the following commands...
+    }else{
+    
+        //Get child of source joint
+        pickWalk -d down;
+        string $selChild[0] = `ls -sl`;
+        
+        select $selChild[0];
+        
+        //Get local translate X (aim vector) value of source's child...
+        float $childJnt_tx = `getAttr ($selChild[0] + ".tx")`;
+        
+        //Get radius of source joint...
+        float $srcJnt_rad = `getAttr ($selSrcJnt[0] + ".radius")`;
+        
+        //Select source joint...
+        pickWalk -d up;
+        
+        //Get value from UI's text field...
+        float $get_tfbg_val = `textFieldButtonGrp -q -text myTextFieldBtnGrp`;
+        
+        //Make sure at least one segment will be created...
+        if ($get_tfbg_val < 2){
+            warning "Must create at least one segment.";
+        }else{
+        
+            //'For' loop - set joint quantity...
+            for ($i=1; $i<$get_tfbg_val; ++$i){
+                
+                //Create joints and match their orientation to source joint...
+                string $jnt = `joint -rad $srcJnt_rad -o 0 0 0`;
+                
+                //Set distance for new joints...
+                move -r -ls (($childJnt_tx) / $get_tfbg_val) 0 0;
+                
+            }
+            
+            //Get last joint created...
+            string $lastJt[] = `ls -sl`;
+            
+            //Parent source's child joint to last joint created...
+            parent $selChild[0] $lastJt[0] ;
+            
+            //Select source joint.
+            select -cl;
+        }
+    }
+}
