@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: Orc_bodyJointPlacement.ma
-//Last modified: Wed, Feb 25, 2015 03:54:38 PM
+//Last modified: Wed, Feb 25, 2015 03:47:24 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Orc_UV_s" -rfn "Orc_UV_sRN" -op "VERS|2015|UVER|undef|MADE|undef|CHNG|Sat, Feb 21, 2015 09:50:11 PM|ICON|undef|INFO|undef|OBJN|252|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 "/Users/Samantha/Desktop/My Portfolio/OrcRig/OrcRig//scenes/Orc_UV's.mb";
@@ -18,14 +18,14 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.0783980284522841 151.08378143476773 196.84488030821404 ;
-	setAttr ".r" -type "double3" -10.538352729936447 -7.0000000000005862 2.0027750574897719e-16 ;
+	setAttr ".t" -type "double3" 147.49815579622916 230.98385207972564 137.65844160450825 ;
+	setAttr ".r" -type "double3" -22.538352729939167 45.799999999991847 2.2810627414081466e-15 ;
 	setAttr ".rp" -type "double3" 0 0 -2.8421709430404007e-14 ;
 	setAttr ".rpt" -type "double3" -1.4256370558523222e-14 -1.2542455652826898e-14 1.2387744834857702e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 202.1025702838661;
+	setAttr ".coi" 229.87590515359295;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";

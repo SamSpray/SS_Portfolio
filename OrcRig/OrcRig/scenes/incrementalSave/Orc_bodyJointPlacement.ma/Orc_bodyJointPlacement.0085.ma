@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: Orc_bodyJointPlacement.ma
-//Last modified: Wed, Feb 25, 2015 03:54:38 PM
+//Last modified: Wed, Feb 25, 2015 03:04:01 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Orc_UV_s" -rfn "Orc_UV_sRN" -op "VERS|2015|UVER|undef|MADE|undef|CHNG|Sat, Feb 21, 2015 09:50:11 PM|ICON|undef|INFO|undef|OBJN|252|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 "/Users/Samantha/Desktop/My Portfolio/OrcRig/OrcRig//scenes/Orc_UV's.mb";
@@ -18,18 +18,18 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.0783980284522841 151.08378143476773 196.84488030821404 ;
-	setAttr ".r" -type "double3" -10.538352729936447 -7.0000000000005862 2.0027750574897719e-16 ;
+	setAttr ".t" -type "double3" 98.480125556424383 157.14606554891324 192.46020373951234 ;
+	setAttr ".r" -type "double3" -8.7383527298212869 364.19999999858175 9.9659972922647915e-17 ;
 	setAttr ".rp" -type "double3" 0 0 -2.8421709430404007e-14 ;
 	setAttr ".rpt" -type "double3" -1.4256370558523222e-14 -1.2542455652826898e-14 1.2387744834857702e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 202.1025702838661;
+	setAttr ".coi" 216.36780752162241;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 0 29.379444697319691 ;
+	setAttr ".tp" -type "double3" -7.8232071327732911e-06 76.663887457404044 3.9878685285446345 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -48,12 +48,12 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.1587640095677716 172.3091273417111 166.09913503527144 ;
+	setAttr ".t" -type "double3" 5.6262932223572015 137.3866777543854 166.09913503527144 ;
 createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 33.037547548551842;
+	setAttr ".ow" 64.232901863126003;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -371,10 +371,43 @@ createNode nurbsCurve -n "L_Crease_crvShape" -p "L_Crease_crv";
 		6 0 0 0 1 1 1
 		4
 		5.6974208631419812 178.40508698737747 29.174853033912171
-		5.9116767963275949 175.08412002300051 28.071190630815146
-		7.3043403620340666 172.35235687488395 28.477302944453204
-		7.7012704042750872 168.53030898362604 29.750370719666272
+		5.9116767963275949 175.08412002300051 28.398301180963401
+		7.3043403620340666 172.35235687488395 27.847074778798635
+		8.6069336640145764 169.04482365937884 30.102905648503423
 		;
+createNode transform -n "positionMarker21" -p "L_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape21" -p "positionMarker21";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".t" 1;
+createNode transform -n "positionMarker22" -p "L_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape22" -p "positionMarker22";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".lp" -type "double3" 1 0 0 ;
+	setAttr ".t" 120;
+createNode transform -n "positionMarker23" -p "L_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape23" -p "positionMarker23";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".t" 1;
+createNode transform -n "positionMarker24" -p "L_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape24" -p "positionMarker24";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".lp" -type "double3" 1 0 0 ;
+	setAttr ".t" 120;
+createNode transform -n "positionMarker25" -p "L_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape25" -p "positionMarker25";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".t" 1;
+createNode transform -n "positionMarker26" -p "L_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape26" -p "positionMarker26";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".lp" -type "double3" 1 0 0 ;
+	setAttr ".t" 120;
 createNode transform -n "L_Cheek_crv" -p "FaceCurves_grp";
 	setAttr ".rp" -type "double3" 14.963989973419665 172.4327028498285 22.092047762422276 ;
 	setAttr ".sp" -type "double3" 14.963989973419665 172.4327028498285 22.092047762422276 ;
@@ -597,10 +630,43 @@ createNode nurbsCurve -n "R_Crease_crvShape" -p "R_Crease_crv";
 		6 0 0 0 1 1 1
 		4
 		-5.6974208631419847 178.40508698737747 29.174853033912171
-		-5.9116767963275985 175.08412002300051 28.071190630815146
-		-7.3043403620340701 172.35235687488395 28.477302944453204
-		-7.7012704042750908 168.53030898362604 29.750370719666272
+		-5.9116767963275985 175.08412002300051 28.398301180963401
+		-7.3043403620340701 172.35235687488395 27.847074778798635
+		-8.6069336640145799 169.04482365937884 30.102905648503423
 		;
+createNode transform -n "positionMarker27" -p "R_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape27" -p "positionMarker27";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".t" 1;
+createNode transform -n "positionMarker28" -p "R_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape28" -p "positionMarker28";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".lp" -type "double3" 1 0 0 ;
+	setAttr ".t" 120;
+createNode transform -n "positionMarker29" -p "R_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape29" -p "positionMarker29";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".t" 1;
+createNode transform -n "positionMarker30" -p "R_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape30" -p "positionMarker30";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".lp" -type "double3" 1 0 0 ;
+	setAttr ".t" 120;
+createNode transform -n "positionMarker31" -p "R_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape31" -p "positionMarker31";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".t" 1;
+createNode transform -n "positionMarker32" -p "R_Crease_crvShape";
+createNode positionMarker -n "positionMarkerShape32" -p "positionMarker32";
+	setAttr -k off ".v";
+	setAttr ".uwo" yes;
+	setAttr ".lp" -type "double3" 1 0 0 ;
+	setAttr ".t" 120;
 createNode transform -n "R_Cheek_crv" -p "FaceCurves_grp";
 	setAttr ".rp" -type "double3" -14.963989973419668 172.4327028498285 22.092047762422268 ;
 	setAttr ".sp" -type "double3" -14.963989973419668 172.4327028498285 22.092047762422268 ;
@@ -845,6 +911,54 @@ createNode transform -n "LowerLip_loc05" -p "Locator_grp";
 	setAttr -av ".rx";
 	setAttr ".smd" 7;
 createNode locator -n "LowerLip_loc0Shape5" -p "LowerLip_loc05";
+	setAttr -k off ".v";
+createNode transform -n "L_Crease_loc01" -p "Locator_grp";
+	setAttr ".t" -type "double3" 5.6974208631419812 178.40508698737747 -0.20459166340751977 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 13.134815138801374 -86.308614013548663 ;
+	setAttr -av ".rx";
+	setAttr ".smd" 7;
+createNode locator -n "L_Crease_loc0Shape1" -p "L_Crease_loc01";
+	setAttr -k off ".v";
+createNode transform -n "L_Crease_loc02" -p "Locator_grp";
+	setAttr ".t" -type "double3" 6.823683177165325 173.49876839342522 -0.86807525786984741 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 -3.0186753753602038 -69.984753587236341 ;
+	setAttr -av ".rx";
+	setAttr ".smd" 7;
+createNode locator -n "L_Crease_loc0Shape2" -p "L_Crease_loc02";
+	setAttr -k off ".v";
+createNode transform -n "L_Crease_loc03" -p "Locator_grp";
+	setAttr ".t" -type "double3" 8.6069336640145764 169.04482365937884 0.72346095118373199 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 -32.398772034768228 -68.504179194477985 ;
+	setAttr -av ".rx";
+	setAttr ".smd" 7;
+createNode locator -n "L_Crease_loc0Shape3" -p "L_Crease_loc03";
+	setAttr -k off ".v";
+createNode transform -n "R_Crease_loc01" -p "Locator_grp";
+	setAttr ".t" -type "double3" -5.6974208631419847 178.40508698737747 -0.20459166340751977 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 13.134815138801374 -93.691385986451323 ;
+	setAttr -av ".rx";
+	setAttr ".smd" 7;
+createNode locator -n "R_Crease_loc0Shape1" -p "R_Crease_loc01";
+	setAttr -k off ".v";
+createNode transform -n "R_Crease_loc02" -p "Locator_grp";
+	setAttr ".t" -type "double3" -6.8236831771653286 173.49876839342522 -0.86807525786984741 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 -3.0186753753602042 -110.01524641276363 ;
+	setAttr -av ".rx";
+	setAttr ".smd" 7;
+createNode locator -n "R_Crease_loc0Shape2" -p "R_Crease_loc02";
+	setAttr -k off ".v";
+createNode transform -n "R_Crease_loc03" -p "Locator_grp";
+	setAttr ".t" -type "double3" -8.6069336640145799 169.04482365937884 0.72346095118373199 ;
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 0 -32.398772034768228 -111.49582080552202 ;
+	setAttr -av ".rx";
+	setAttr ".smd" 7;
+createNode locator -n "R_Crease_loc0Shape3" -p "R_Crease_loc03";
 	setAttr -k off ".v";
 createNode transform -n "L_Cheek_loc01" -p "Locator_grp";
 	setAttr ".t" -type "double3" 17.742277138369978 180.33339038604791 -15.11644753432452 ;
@@ -1295,14 +1409,12 @@ createNode joint -n "NoseTip_jnt01" -p "NoseBase_jnt01";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 76.228400282917377 ;
-	setAttr ".pa" -type "double3" -58.003259858139799 89.564076274651825 -134.78016862894233 ;
 createNode joint -n "L_ear_jnt01" -p "UpperHead_jnt01";
 	setAttr ".t" -type "double3" 5.9582341992247905 4.4316936381620229 -18.065445025482394 ;
 	setAttr ".r" -type "double3" 0 90.810539790420506 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 89.999999999999943 89.999999999999929 0 ;
-	setAttr ".pa" -type "double3" 0 90.810539790420506 0 ;
 createNode joint -n "L_eye_jnt01" -p "UpperHead_jnt01";
 	setAttr ".t" -type "double3" 8.4454971593455639 -9.9424464962133321 -8.4186044384394574 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -1324,20 +1436,17 @@ createNode joint -n "LowerJaw_jnt02" -p "LowerJaw_jnt01";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 31.499080528265903 ;
-	setAttr ".pa" -type "double3" 0 90 0 ;
 createNode joint -n "Neck_jnt02" -p "Neck_jnt01";
 	setAttr ".t" -type "double3" 4.2902307192739642 -2.1352426529653314 -4.7321053662442504e-07 ;
 	setAttr ".r" -type "double3" 0 0 8.8341529584875964 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 39.064999999999991 89.999999251228417 0 ;
-	setAttr ".pa" -type "double3" 0 0 8.8341529584875964 ;
 	setAttr ".radi" 0.88170021236165697;
-createNode joint -n "L_clav_jnt01" -p "Chest_jnt01";
-	setAttr ".t" -type "double3" 2.8421709430404007e-14 7.1054273576010019e-15 1.3998891919931667e-14 ;
+createNode joint -n "L_clav_jnt01";
+	setAttr ".t" -type "double3" 2.3255402524309508e-08 138.63839194847463 -7.5833106164846402 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 75.867426634159756 89.99999776644384 0 ;
 	setAttr ".radi" 2.5;
 createNode joint -n "L_clav_jnt02" -p "L_clav_jnt01";
 	setAttr ".t" -type "double3" 17.731138359715452 6.6277481613784062 21.927254614568696 ;
@@ -1351,11 +1460,21 @@ createNode joint -n "L_shoulder_jnt01" -p "L_clav_jnt02";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -0.1612345345924375 -7.3359753267869658 -9.509900106602112 ;
 	setAttr ".radi" 2;
-createNode joint -n "L_shoulder_jnt02" -p "Joints";
+createNode joint -n "L_Trapezius_jnt01";
+	setAttr ".t" -type "double3" 29.462388040445717 173.88784456150609 -8.1335296620197877 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 6.3611093629270351e-15 6.3611093629270335e-15 9.5416640443905503e-15 ;
+createNode joint -n "Belly_jnt01";
+	setAttr ".t" -type "double3" 6.3782132665725526e-15 91.075126693167476 31.820166843048071 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 0 9.5416640443905503e-15 0 ;
+createNode joint -n "L_shoulder_jnt02";
 	setAttr ".t" -type "double3" 42.74942970429543 148.89702274352609 -8.8740886979897677 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -0.82197387104448782 3.7086301534504829 -12.506199977337515 ;
+	setAttr ".jo" -type "double3" -0.82197387104448771 3.7086301534504829 -12.506199977337518 ;
 	setAttr ".radi" 3;
 createNode joint -n "L_elbow_jnt01" -p "L_shoulder_jnt02";
 	setAttr ".t" -type "double3" 35.548606002557349 -2.8033131371785203e-15 5.5511151231257827e-15 ;
@@ -1535,14 +1654,6 @@ createNode joint -n "L_Thumb_jnt03" -p "L_Thumb_jnt02";
 createNode joint -n "L_Thumb_jnt04" -p "L_Thumb_jnt03";
 	setAttr ".t" -type "double3" 7.3137527769995927 -0.00012455520912624252 -3.1277694219511432e-05 ;
 	setAttr ".radi" 2.5;
-createNode joint -n "L_Trapezius_jnt01" -p "Joints";
-	setAttr ".t" -type "double3" 29.462388040445717 173.88784456150609 -8.1335296620197877 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-createNode joint -n "Belly_jnt01" -p "Joints";
-	setAttr ".t" -type "double3" 6.3782132665725526e-15 91.075126693167476 31.820166843048071 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 createNode mentalrayOptions -s -n "miDefaultOptions";
@@ -1748,1057 +1859,9 @@ createNode reference -n "Orc_UV_sRN";
 		""
 		5 4 "Orc_UV_sRN" "|Orc_UV_s:polySurface2.drawOverride" "Orc_UV_sRN.placeHolderList[24]" 
 		""
-		"Orc_UV_sRN" 501
+		"Orc_UV_sRN" 40
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1" "displayRotatePivot" " 0"
 		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"uvPivot" " -type \"double2\" 0.58348000049591064 0.50128000974655151"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts" " -s 459"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[191]" " -type \"float3\" 0 2.3841858000000002e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[192]" " -type \"float3\" 0 -1.6689301000000002e-06 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[193]" " -type \"float3\" 0 2.3841858000000002e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[194]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[195]" " -type \"float3\" 0 -9.536743200000001e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[196]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[197]" " -type \"float3\" 0 4.7683716000000005e-07 -9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[198]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[199]" " -type \"float3\" 0 -4.7683716000000005e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[200]" " -type \"float3\" 0 1.4305114999999999e-06 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[201]" " -type \"float3\" 0 7.1525574000000002e-07 9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[202]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[203]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[204]" " -type \"float3\" 0 -7.1525574000000002e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[205]" " -type \"float3\" 0 -4.7683716000000005e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[206]" " -type \"float3\" 0 0 1.1920929000000001e-06"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[208]" " -type \"float3\" 0 -7.1525574000000002e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[212]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[213]" " -type \"float3\" 0 0 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[214]" " -type \"float3\" 0 -1.6689301000000002e-06 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[215]" " -type \"float3\" 0 2.3841858000000002e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[217]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[218]" " -type \"float3\" 0 -4.7683716000000005e-07 -7.1525574000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[219]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[220]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[221]" " -type \"float3\" 0 2.3841858000000002e-07 1.4305114999999999e-06"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[222]" " -type \"float3\" 0 7.1525574000000002e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[223]" " -type \"float3\" 0 -7.1525574000000002e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[224]" " -type \"float3\" 0 4.7683716000000005e-07 -7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[225]" " -type \"float3\" 0 -2.3841858000000002e-07 -7.1525574000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[226]" " -type \"float3\" 0 -4.7683716000000005e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[227]" " -type \"float3\" 0 0 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[228]" " -type \"float3\" 0 4.7683716000000005e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[229]" " -type \"float3\" 0 7.1525574000000002e-07 9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[230]" " -type \"float3\" 0 2.3841858000000002e-07 -1.4305114999999999e-06"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[231]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[232]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[233]" " -type \"float3\" 0 9.536743200000001e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[234]" " -type \"float3\" 0 2.3841858000000002e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[235]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[236]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[237]" " -type \"float3\" 0 -7.1525574000000002e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[238]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[239]" " -type \"float3\" 0 4.7683716000000005e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[240]" " -type \"float3\" 0 -2.3841858000000002e-07 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[241]" " -type \"float3\" 0 1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[246]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[249]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[250]" " -type \"float3\" 0 -1.7881393000000001e-07 5.9604644999999993e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[251]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[258]" " -type \"float3\" 0 1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[261]" " -type \"float3\" 0 5.9604644999999993e-08 -2.9802322000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[262]" " -type \"float3\" 0 -1.1920929000000001e-07 -5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[263]" " -type \"float3\" 0 1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[264]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[265]" " -type \"float3\" 0 -2.3841858000000002e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[266]" " -type \"float3\" 0 -2.3841858000000002e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[267]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[268]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[275]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[280]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[283]" " -type \"float3\" 0 2.2351741999999998e-08 -7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[284]" " -type \"float3\" 0 1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[285]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[292]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[295]" " -type \"float3\" 0 5.9604644999999993e-08 -2.9802322000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[296]" " -type \"float3\" 0 -2.3841858000000002e-07 -5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[297]" " -type \"float3\" 0 1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[298]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[299]" " -type \"float3\" 0 -2.3841858000000002e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[300]" " -type \"float3\" 0 -2.3841858000000002e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[301]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[302]" " -type \"float3\" 0 7.1525574000000002e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[303]" " -type \"float3\" 0 0 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[304]" " -type \"float3\" 0 -7.1525574000000002e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[305]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[306]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[307]" " -type \"float3\" 0 -9.536743200000001e-07 1.7881393000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[308]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[309]" " -type \"float3\" 0 -5.9604644999999993e-08 8.9406967000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[310]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[311]" " -type \"float3\" 0 -7.1525574000000002e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[313]" " -type \"float3\" 0 0 -7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[314]" " -type \"float3\" 0 0 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[315]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[317]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[321]" " -type \"float3\" 0 -7.4505806000000003e-09 7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[322]" " -type \"float3\" 0 5.9604644999999993e-08 5.9604644999999993e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[323]" " -type \"float3\" 0 1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[324]" " -type \"float3\" 0 -2.3655593e-07 -9.3132257000000002e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[325]" " -type \"float3\" 0 2.9802322000000001e-08 -3.1292439000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[326]" " -type \"float3\" 0 1.4901161000000001e-08 2.4586915999999999e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[327]" " -type \"float3\" 0 -3.5762787000000001e-07 -2.9802322e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[328]" " -type \"float3\" 0 -2.6822089999999998e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[329]" " -type \"float3\" 0 2.3841858000000002e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[330]" " -type \"float3\" 0 5.9604644999999993e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[331]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[333]" " -type \"float3\" 0 7.4505806000000003e-09 -3.7252903000000002e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[334]" " -type \"float3\" 0 0 2.9802322000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[341]" " -type \"float3\" 0 -7.4505806000000003e-09 3.7252903000000002e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[342]" " -type \"float3\" 0 -1.1920929000000001e-07 -2.9802322000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[348]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[349]" " -type \"float3\" 0 -2.3841858000000002e-07 9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[350]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[351]" " -type \"float3\" 0 -4.7683716000000005e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[352]" " -type \"float3\" 0 0 3.7252903000000002e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[353]" " -type \"float3\" 0 7.4505806000000003e-09 -7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[354]" " -type \"float3\" 0 -1.8626450999999999e-09 3.7252903000000002e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[355]" " -type \"float3\" 0 -1.1920929000000001e-06 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[356]" " -type \"float3\" 0 1.4901161000000001e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[450]" " -type \"float3\" 0 1.4901161000000001e-08 7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[452]" " -type \"float3\" 0 4.4703483999999995e-08 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[465]" " -type \"float3\" 0 2.3841858000000002e-07 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[466]" " -type \"float3\" 0 5.9604644999999993e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[468]" " -type \"float3\" 0 0 1.1175870999999999e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[470]" " -type \"float3\" 0 -4.6566128999999998e-10 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[473]" " -type \"float3\" 0 -1.8626450999999999e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[476]" " -type \"float3\" 0 -2.9802322000000001e-08 -5.5879354000000002e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[477]" " -type \"float3\" 0 1.4901161000000001e-08 -9.3132257000000002e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[482]" " -type \"float3\" 0 -4.4703483999999995e-08 3.7252903000000002e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[483]" " -type \"float3\" 0 2.9802322000000001e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[484]" " -type \"float3\" 0 1.4901161000000001e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[486]" " -type \"float3\" 0 5.9604644999999993e-08 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[487]" " -type \"float3\" 0 -2.9802322000000001e-08 -3.7252903000000002e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[489]" " -type \"float3\" 0 1.1175870999999999e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[490]" " -type \"float3\" 0 7.4505806000000003e-09 2.3283064000000002e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[491]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[493]" " -type \"float3\" 0 0 5.9604644999999993e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[494]" " -type \"float3\" 0 -1.7881393000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[495]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[496]" " -type \"float3\" 0 0 -9.3132257000000002e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[497]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.9802322e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[498]" " -type \"float3\" 0 5.9604644999999993e-08 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[499]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.2351741999999998e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[500]" " -type \"float3\" 0 1.1920929000000001e-07 -7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[501]" " -type \"float3\" 0 5.9604644999999993e-08 -3.7252903000000002e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[502]" " -type \"float3\" 0 2.3841858000000002e-07 3.5762787000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[503]" " -type \"float3\" 0 2.3841858000000002e-07 -1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[504]" " -type \"float3\" 0 -4.6566128999999998e-10 4.6566128999999998e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[506]" " -type \"float3\" 0 5.9604644999999993e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[507]" " -type \"float3\" 0 5.5879354000000002e-09 1.8626450999999999e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[508]" " -type \"float3\" 0 -4.7683716000000005e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[509]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[510]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[511]" " -type \"float3\" 0 1.1920929000000001e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[512]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[513]" " -type \"float3\" 0 0 2.9802322000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[514]" " -type \"float3\" 0 1.1920929000000001e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[515]" " -type \"float3\" 0 4.4703483999999995e-08 -1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[519]" " -type \"float3\" 0 -2.3841858000000002e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[524]" " -type \"float3\" 0 5.9604644999999993e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[525]" " -type \"float3\" 0 -2.3841858000000002e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[526]" " -type \"float3\" 0 1.1920929000000001e-07 -1.1920929000000001e-06"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[527]" " -type \"float3\" 0 3.5762787000000001e-07 -4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[528]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[529]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[530]" " -type \"float3\" 0 1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[531]" " -type \"float3\" 0 1.1920929000000001e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[532]" " -type \"float3\" 0 -1.1920929000000001e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[533]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[537]" " -type \"float3\" 0 -2.9802322000000001e-08 -1.7881393000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[623]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[624]" " -type \"float3\" 0 1.1920929000000001e-07 -3.5762787000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[625]" " -type \"float3\" 0 0 1.7881393000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[626]" " -type \"float3\" 0 2.2351741999999998e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[627]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[628]" " -type \"float3\" 0 -5.9604644999999993e-08 2.9802322e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[629]" " -type \"float3\" 0 1.1920929000000001e-07 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[630]" " -type \"float3\" 0 0 -7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[631]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[640]" " -type \"float3\" 0 1.8626450999999999e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[641]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[642]" " -type \"float3\" 0 -2.0861626000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[643]" " -type \"float3\" 0 -1.4901161000000001e-08 7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[644]" " -type \"float3\" 0 0 3.7252903000000002e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[645]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[646]" " -type \"float3\" 0 0 -2.9802322000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[647]" " -type \"float3\" 0 0 -1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[648]" " -type \"float3\" 0 2.9802322000000001e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[649]" " -type \"float3\" 0 -3.7252903000000002e-09 7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[650]" " -type \"float3\" 0 -1.4901161000000001e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[651]" " -type \"float3\" 0 1.4901161000000001e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[652]" " -type \"float3\" 0 -2.3841858000000002e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[653]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[654]" " -type \"float3\" 0 -1.1920929000000001e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[655]" " -type \"float3\" 0 -1.4901161000000001e-08 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[656]" " -type \"float3\" 0 2.9802322000000001e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[669]" " -type \"float3\" 0 6.9849192999999995e-10 5.9604644999999993e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[670]" " -type \"float3\" 0 -1.1641532000000001e-10 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[692]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[694]" " -type \"float3\" 0 -7.4505806000000003e-09 -1.8626450999999999e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[695]" " -type \"float3\" 0 0 -4.6566128999999998e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[697]" " -type \"float3\" 0 1.4901161000000001e-08 -8.1490725000000009e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[702]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1100]" " -type \"float3\" 0 4.7683716000000005e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1101]" " -type \"float3\" 0 0 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1102]" " -type \"float3\" 0 -2.3841858000000002e-07 9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1103]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1104]" " -type \"float3\" 0 -9.536743200000001e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1105]" " -type \"float3\" 0 4.7683716000000005e-07 -7.1525574000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1106]" " -type \"float3\" 0 -4.7683716000000005e-07 -9.536743200000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1107]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1108]" " -type \"float3\" 0 -7.1525574000000002e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1109]" " -type \"float3\" 0 2.3841858000000002e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1110]" " -type \"float3\" 0 -7.1525574000000002e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1111]" " -type \"float3\" 0 2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1112]" " -type \"float3\" 0 2.3841858000000002e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1113]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1114]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1115]" " -type \"float3\" 0 0 9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1116]" " -type \"float3\" 0 -4.7683716000000005e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1117]" " -type \"float3\" 0 -2.3841858000000002e-07 2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1118]" " -type \"float3\" 0 -4.7683716000000005e-07 -9.536743200000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1119]" " -type \"float3\" 0 4.4703483999999998e-07 -2.6822089999999998e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1120]" " -type \"float3\" 0 0 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1121]" " -type \"float3\" 0 -1.1920929000000001e-07 2.9802322000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1122]" " -type \"float3\" 0 5.9604644999999993e-07 -2.9802322e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1123]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1125]" " -type \"float3\" 0 -2.2351741999999998e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1126]" " -type \"float3\" 0 -1.1920929000000001e-07 3.5762787000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1127]" " -type \"float3\" 0 -2.3841858000000002e-07 4.8056245000000006e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1129]" " -type \"float3\" 0 -1.1920929000000001e-07 -3.5762787000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1133]" " -type \"float3\" 0 -3.7252903000000002e-09 3.7252903000000002e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1134]" " -type \"float3\" 0 -1.1920929000000001e-07 -5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1135]" " -type \"float3\" 0 -1.1920929000000001e-07 2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1136]" " -type \"float3\" 0 2.4028122000000001e-07 -1.1827796999999999e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1137]" " -type \"float3\" 0 0 -1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1138]" " -type \"float3\" 0 1.4901161000000001e-08 -4.8428773999999996e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1139]" " -type \"float3\" 0 -2.9802322e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1140]" " -type \"float3\" 0 4.4703483999999998e-07 -2.8312206000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1141]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1142]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1143]" " -type \"float3\" 0 0 3.5762787000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1144]" " -type \"float3\" 0 2.3841858000000002e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1145]" " -type \"float3\" 0 -4.7683716000000005e-07 -9.536743200000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1146]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1147]" " -type \"float3\" 0 4.7683716000000005e-07 9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1148]" " -type \"float3\" 0 0 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1149]" " -type \"float3\" 0 7.4505806000000003e-09 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1235]" " -type \"float3\" 0 -1.4901161000000001e-08 -1.4901161000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1237]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1247]" " -type \"float3\" 0 0 2.9802322000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1249]" " -type \"float3\" 0 -2.9802322000000001e-08 7.4505806000000003e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1251]" " -type \"float3\" 0 -2.3283064000000002e-10 1.1641532000000001e-10"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1254]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1257]" " -type \"float3\" 0 0 -5.5879354000000002e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1258]" " -type \"float3\" 0 0 9.3132257000000002e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1263]" " -type \"float3\" 0 0 1.8626450999999999e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1264]" " -type \"float3\" 0 1.4901161000000001e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1265]" " -type \"float3\" 0 1.4901161000000001e-08 4.6566128999999998e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1267]" " -type \"float3\" 0 -5.9604644999999993e-08 -4.4703483999999995e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1268]" " -type \"float3\" 0 2.9802322000000001e-08 3.7252903000000002e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1270]" " -type \"float3\" 0 3.7252903000000002e-09 2.3283064000000002e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1271]" " -type \"float3\" 0 0 4.6566128999999998e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1272]" " -type \"float3\" 0 0 -1.1641532000000001e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1274]" " -type \"float3\" 0 -5.9604644999999993e-08 -5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1275]" " -type \"float3\" 0 0 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1276]" " -type \"float3\" 0 5.9604644999999993e-08 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1277]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1278]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1279]" " -type \"float3\" 0 -2.9802322000000001e-08 -2.9802322000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1280]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1281]" " -type \"float3\" 0 2.9802322000000001e-08 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1282]" " -type \"float3\" 0 -1.1920929000000001e-07 7.4505806000000003e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1283]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1284]" " -type \"float3\" 0 0 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1285]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1286]" " -type \"float3\" 0 0 -2.3283064000000002e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1288]" " -type \"float3\" 0 2.9802322000000001e-08 -2.9802322000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1289]" " -type \"float3\" 0 -3.5949051e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1290]" " -type \"float3\" 0 -2.3841858000000002e-07 2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1291]" " -type \"float3\" 0 -4.7683716000000005e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1292]" " -type \"float3\" 0 -7.1525574000000002e-07 7.1525574000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1293]" " -type \"float3\" 0 -1.1920929000000001e-07 4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1294]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1295]" " -type \"float3\" 0 2.9802322000000001e-08 -5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1296]" " -type \"float3\" 0 -4.7683716000000005e-07 9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1297]" " -type \"float3\" 0 -2.9802322000000001e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1298]" " -type \"float3\" 0 9.536743200000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1300]" " -type \"float3\" 0 2.3841858000000002e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1301]" " -type \"float3\" 0 0 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1302]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1303]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1304]" " -type \"float3\" 0 2.3841858000000002e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1305]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1306]" " -type \"float3\" 0 3.5762787000000001e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1307]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1308]" " -type \"float3\" 0 -3.5762787000000001e-07 9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1309]" " -type \"float3\" 0 -2.9802322000000001e-08 5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1313]" " -type \"float3\" 0 2.9802322000000001e-08 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1356]" " -type \"float3\" 0 -2.9802322000000001e-08 -7.4505806000000003e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1357]" " -type \"float3\" 0 0 -5.9604644999999993e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1358]" " -type \"float3\" 0 -1.1920929000000001e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1359]" " -type \"float3\" 0 2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1360]" " -type \"float3\" 0 0 -7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1361]" " -type \"float3\" 0 0 2.0861626000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1362]" " -type \"float3\" 0 -5.9604644999999993e-08 -5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1363]" " -type \"float3\" 0 -2.9802322e-07 3.5762787000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1371]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1372]" " -type \"float3\" 0 2.7939677000000001e-09 -1.4901161000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1373]" " -type \"float3\" 0 -2.9802322000000001e-08 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1374]" " -type \"float3\" 0 2.3841858000000002e-07 -2.9802322e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1375]" " -type \"float3\" 0 0 -1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1376]" " -type \"float3\" 0 3.7252903000000002e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1377]" " -type \"float3\" 0 3.7252903000000002e-09 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1378]" " -type \"float3\" 0 -1.4901161000000001e-08 -5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1379]" " -type \"float3\" 0 -1.4901161000000001e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1380]" " -type \"float3\" 0 -5.9604644999999993e-08 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1381]" " -type \"float3\" 0 -1.8626450999999999e-09 -7.4505806000000003e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1382]" " -type \"float3\" 0 1.4901161000000001e-08 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1383]" " -type \"float3\" 0 -7.4505806000000003e-09 1.4901161000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1384]" " -type \"float3\" 0 -1.1920929000000001e-07 2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1385]" " -type \"float3\" 0 0 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1386]" " -type \"float3\" 0 0 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1387]" " -type \"float3\" 0 5.9604644999999993e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1388]" " -type \"float3\" 0 1.4901161000000001e-08 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1401]" " -type \"float3\" 0 -2.3283064000000002e-10 -5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1402]" " -type \"float3\" 0 -2.3283064000000002e-10 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1421]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1423]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1424]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1426]" " -type \"float3\" 0 7.4505806000000003e-09 1.1641532000000001e-10"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1431]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[1978]" " -type \"float3\" -1.7260491 0.46458011999999999 -0.88410783000000004"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[2460]" " -type \"float3\" 1.7260491 0.46458011999999999 -0.88410783000000004"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4591]" " -type \"float3\" 0 0 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4592]" " -type \"float3\" 0 2.3841858000000002e-07 -9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4593]" " -type \"float3\" 0 -2.3841858000000002e-07 2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4594]" " -type \"float3\" 0 -2.9802322000000001e-08 -2.9802322000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4595]" " -type \"float3\" 0 -1.1920929000000001e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4598]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4599]" " -type \"float3\" 0 -4.7683716000000005e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4600]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4601]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4603]" " -type \"float3\" 0 0 3.5762787000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4604]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4605]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4606]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4607]" " -type \"float3\" 0 -3.5762787000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4608]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4611]" " -type \"float3\" 0 -3.7252903000000002e-09 1.8626450999999999e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4612]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4613]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4614]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.2479722000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4615]" " -type \"float3\" 0 1.4901161000000001e-08 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4617]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4618]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4619]" " -type \"float3\" 0 2.0861626000000001e-07 -2.9802322e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4620]" " -type \"float3\" 0 -5.9604644999999993e-08 1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4621]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.9802322e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4622]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4623]" " -type \"float3\" 0 1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4624]" " -type \"float3\" 0 0 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4628]" " -type \"float3\" 0 2.3841858000000002e-07 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4632]" " -type \"float3\" 0 0 1.8626450999999999e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4633]" " -type \"float3\" 0 0 -5.9604644999999993e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4634]" " -type \"float3\" 0 5.9604644999999993e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4635]" " -type \"float3\" 0 5.9604644999999993e-08 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4636]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4637]" " -type \"float3\" 0 1.8626450999999999e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4639]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4640]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4641]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4642]" " -type \"float3\" 0 1.8626450999999999e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4644]" " -type \"float3\" 0 2.9802322000000001e-08 -2.9802322000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4645]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4646]" " -type \"float3\" 0 0 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4672]" " -type \"float3\" 0 3.5762787000000001e-07 5.9604644999999993e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4677]" " -type \"float3\" 0 -4.4703483999999995e-08 8.9406967000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4678]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4679]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4680]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4681]" " -type \"float3\" 0 -1.1920929000000001e-07 3.5762787000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4682]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4683]" " -type \"float3\" 0 -1.4901161000000001e-08 -7.4505806000000003e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4691]" " -type \"float3\" 0 2.9802322000000001e-08 -5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4692]" " -type \"float3\" 0 1.7881393000000001e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4693]" " -type \"float3\" 0 1.1920929000000001e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4694]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4695]" " -type \"float3\" 0 1.1920929000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4696]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4706]" " -type \"float3\" 0 -1.8626450999999999e-09 7.4505806000000003e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4707]" " -type \"float3\" 0 0 2.9802322000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4708]" " -type \"float3\" 0 -7.4505806000000003e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4709]" " -type \"float3\" 0 1.8626450999999999e-09 7.4505806000000003e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4773]" " -type \"float3\" 0 7.4505806000000003e-09 2.9802322000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4774]" " -type \"float3\" 0 -1.1920929000000001e-07 -7.1525574000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4775]" " -type \"float3\" 0 0 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4776]" " -type \"float3\" 0 2.3841858000000002e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4777]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4778]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4779]" " -type \"float3\" 0 8.3446503e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4780]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4821]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4822]" " -type \"float3\" 0 0 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4824]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4826]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4827]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4828]" " -type \"float3\" 0 -3.5762787000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4829]" " -type \"float3\" 0 -4.7683716000000005e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4830]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4831]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4832]" " -type \"float3\" 0 2.3841858000000002e-07 -9.536743200000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4833]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4834]" " -type \"float3\" 0 -5.9604644999999993e-08 1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4835]" " -type \"float3\" 0 -1.1920929000000001e-07 -4.7683716000000005e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4837]" " -type \"float3\" 0 0 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4839]" " -type \"float3\" 0 1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4840]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4841]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.9802322e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4842]" " -type \"float3\" 0 2.0861626000000001e-07 -2.9802322e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4843]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4844]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4845]" " -type \"float3\" 0 8.3446503e-07 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4846]" " -type \"float3\" 0 3.5762787000000001e-07 5.9604644999999993e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4849]" " -type \"float3\" 0 1.4901161000000001e-08 1.4901161000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4850]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4851]" " -type \"float3\" 0 -2.3841858000000002e-07 2.3841858000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4852]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.2479722000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4853]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4854]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4855]" " -type \"float3\" 0 -3.7252903000000002e-09 1.8626450999999999e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4858]" " -type \"float3\" 0 1.8626450999999999e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4859]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4863]" " -type \"float3\" 0 0 1.8626450999999999e-09"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4864]" " -type \"float3\" 0 0 -5.9604644999999993e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4865]" " -type \"float3\" 0 5.9604644999999993e-08 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4869]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4870]" " -type \"float3\" 0 -2.9802322000000001e-08 -2.9802322000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4871]" " -type \"float3\" 0 5.9604644999999993e-08 1.1920929000000001e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4872]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4873]" " -type \"float3\" 0 2.9802322000000001e-08 -2.9802322000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4874]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4876]" " -type \"float3\" 0 1.8626450999999999e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4878]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4879]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4880]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4884]" " -type \"float3\" 0 0 2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4885]" " -type \"float3\" 0 2.3841858000000002e-07 7.1525574000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4889]" " -type \"float3\" 0 1.4901161000000001e-08 -2.9802322000000001e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4890]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4891]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4892]" " -type \"float3\" 0 0 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4893]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4894]" " -type \"float3\" 0 -1.1920929000000001e-07 3.5762787000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4895]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4896]" " -type \"float3\" 0 -1.4901161000000001e-08 -7.4505806000000003e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4902]" " -type \"float3\" 0 2.9802322000000001e-08 -5.9604644999999993e-08"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4903]" " -type \"float3\" 0 1.7881393000000001e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4904]" " -type \"float3\" 0 1.1920929000000001e-07 4.7683716000000005e-07"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4905]" " -type \"float3\" 0 -1.1920929000000001e-07 -7.1525574000000002e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4906]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4907]" " -type \"float3\" 0 1.1920929000000001e-07 -1.1920929000000001e-07"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4908]" " -type \"float3\" 0 0 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4916]" " -type \"float3\" 0 -1.8626450999999999e-09 7.4505806000000003e-09"
-		
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4917]" " -type \"float3\" 0 0 2.9802322000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4918]" " -type \"float3\" 0 7.4505806000000003e-09 2.9802322000000001e-08"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4919]" " -type \"float3\" 0 -7.4505806000000003e-09 0"
-		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Orc_FT:polySurface1|Orc_UV_s:Orc_FT:polySurfaceShape1" 
-		"pnts[4920]" " -type \"float3\" 0 1.8626450999999999e-09 7.4505806000000003e-09"
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Pants|Orc_UV_s:SideFlaps" "visibility" " 1"
 		
 		2 "|Orc_UV_s:OrcMesh|Orc_UV_s:Eyes|Orc_UV_s:L_eye" "displayRotatePivot" " 1"
@@ -2894,10 +1957,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n"
 		+ "            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n"
 		+ "            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n"
-		+ "                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 1\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 1\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
+		+ "                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 1\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
 		+ "                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
 		+ "                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 1\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n"
 		+ "            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n"
 		+ "            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 1\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
@@ -2924,9 +1987,9 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n"
 		+ "                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -currentNode \"L_Crease_loc01\" \n                -opaqueContainers 0\n                -dropTargetNode \"Joints\" \n                -dropNode \"Belly_jnt01\" \n"
-		+ "                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n"
-		+ "                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -currentNode \"L_Crease_loc01\" \n                -opaqueContainers 0\n                -dropTargetNode \"Joints\" \n                -dropNode \"Belly_jnt01\" \n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 0.314775\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -currentNode \"L_shoulder_jnt02\" \n                -opaqueContainers 0\n                -dropNode \"L_shoulder_jnt02\" \n                -freeform 0\n"
+		+ "                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 0.314775\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n"
+		+ "                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -currentNode \"L_shoulder_jnt02\" \n                -opaqueContainers 0\n                -dropNode \"L_shoulder_jnt02\" \n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n"
 		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n"
 		+ "                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
@@ -3124,6 +2187,94 @@ createNode animCurveTL -n "motionPath10_uValue";
 	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
 createNode addDoubleLinear -n "addDoubleLinear29";
 createNode addDoubleLinear -n "addDoubleLinear28";
+createNode addDoubleLinear -n "addDoubleLinear33";
+createNode motionPath -n "motionPath11";
+	setAttr -s 2 ".pmt";
+	setAttr -s 2 ".pmt";
+	setAttr ".f" yes;
+	setAttr ".fa" 0;
+	setAttr ".ua" 1;
+	setAttr ".fm" yes;
+createNode animCurveTL -n "motionPath11_uValue";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
+createNode addDoubleLinear -n "addDoubleLinear32";
+createNode addDoubleLinear -n "addDoubleLinear31";
+createNode addDoubleLinear -n "addDoubleLinear36";
+createNode motionPath -n "motionPath12";
+	setAttr -av ".u" 0.5;
+	setAttr -s 2 ".pmt";
+	setAttr -s 2 ".pmt";
+	setAttr ".f" yes;
+	setAttr ".fa" 0;
+	setAttr ".ua" 1;
+	setAttr ".fm" yes;
+createNode animCurveTL -n "motionPath12_uValue";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
+createNode addDoubleLinear -n "addDoubleLinear35";
+createNode addDoubleLinear -n "addDoubleLinear34";
+createNode addDoubleLinear -n "addDoubleLinear37";
+createNode motionPath -n "motionPath13";
+	setAttr -av ".u" 1;
+	setAttr -s 2 ".pmt";
+	setAttr -s 2 ".pmt";
+	setAttr ".f" yes;
+	setAttr ".fa" 0;
+	setAttr ".ua" 1;
+	setAttr ".fm" yes;
+createNode animCurveTL -n "motionPath13_uValue";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
+createNode addDoubleLinear -n "addDoubleLinear39";
+createNode addDoubleLinear -n "addDoubleLinear38";
+createNode addDoubleLinear -n "addDoubleLinear42";
+createNode motionPath -n "motionPath14";
+	setAttr -s 2 ".pmt";
+	setAttr -s 2 ".pmt";
+	setAttr ".f" yes;
+	setAttr ".fa" 0;
+	setAttr ".ua" 1;
+	setAttr ".fm" yes;
+createNode animCurveTL -n "motionPath14_uValue";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
+createNode addDoubleLinear -n "addDoubleLinear41";
+createNode addDoubleLinear -n "addDoubleLinear40";
+createNode addDoubleLinear -n "addDoubleLinear45";
+createNode motionPath -n "motionPath15";
+	setAttr -av ".u" 0.5;
+	setAttr -s 2 ".pmt";
+	setAttr -s 2 ".pmt";
+	setAttr ".f" yes;
+	setAttr ".fa" 0;
+	setAttr ".ua" 1;
+	setAttr ".fm" yes;
+createNode animCurveTL -n "motionPath15_uValue";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
+createNode addDoubleLinear -n "addDoubleLinear44";
+createNode addDoubleLinear -n "addDoubleLinear43";
+createNode addDoubleLinear -n "addDoubleLinear48";
+createNode motionPath -n "motionPath16";
+	setAttr -av ".u" 1;
+	setAttr -s 2 ".pmt";
+	setAttr -s 2 ".pmt";
+	setAttr ".f" yes;
+	setAttr ".fa" 0;
+	setAttr ".ua" 1;
+	setAttr ".fm" yes;
+createNode animCurveTL -n "motionPath16_uValue";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 120 1;
+createNode addDoubleLinear -n "addDoubleLinear46";
+createNode addDoubleLinear -n "addDoubleLinear47";
 createNode addDoubleLinear -n "addDoubleLinear51";
 createNode motionPath -n "motionPath17";
 	setAttr -s 2 ".pmt";
@@ -3888,6 +3039,54 @@ connectAttr "motionPath10.ry" "LowerLip_loc05.ry";
 connectAttr "motionPath10.rz" "LowerLip_loc05.rz";
 connectAttr "motionPath10.msg" "LowerLip_loc05.sml";
 connectAttr "motionPath10.ro" "LowerLip_loc05.ro";
+connectAttr "addDoubleLinear33.o" "L_Crease_loc01.tz";
+connectAttr "addDoubleLinear31.o" "L_Crease_loc01.tx";
+connectAttr "addDoubleLinear32.o" "L_Crease_loc01.ty";
+connectAttr "motionPath11.rx" "L_Crease_loc01.rx";
+connectAttr "motionPath11.ry" "L_Crease_loc01.ry";
+connectAttr "motionPath11.rz" "L_Crease_loc01.rz";
+connectAttr "motionPath11.msg" "L_Crease_loc01.sml";
+connectAttr "motionPath11.ro" "L_Crease_loc01.ro";
+connectAttr "addDoubleLinear36.o" "L_Crease_loc02.tz";
+connectAttr "addDoubleLinear34.o" "L_Crease_loc02.tx";
+connectAttr "addDoubleLinear35.o" "L_Crease_loc02.ty";
+connectAttr "motionPath12.rx" "L_Crease_loc02.rx";
+connectAttr "motionPath12.ry" "L_Crease_loc02.ry";
+connectAttr "motionPath12.rz" "L_Crease_loc02.rz";
+connectAttr "motionPath12.msg" "L_Crease_loc02.sml";
+connectAttr "motionPath12.ro" "L_Crease_loc02.ro";
+connectAttr "addDoubleLinear39.o" "L_Crease_loc03.tz";
+connectAttr "addDoubleLinear37.o" "L_Crease_loc03.tx";
+connectAttr "addDoubleLinear38.o" "L_Crease_loc03.ty";
+connectAttr "motionPath13.rx" "L_Crease_loc03.rx";
+connectAttr "motionPath13.ry" "L_Crease_loc03.ry";
+connectAttr "motionPath13.rz" "L_Crease_loc03.rz";
+connectAttr "motionPath13.msg" "L_Crease_loc03.sml";
+connectAttr "motionPath13.ro" "L_Crease_loc03.ro";
+connectAttr "addDoubleLinear42.o" "R_Crease_loc01.tz";
+connectAttr "addDoubleLinear40.o" "R_Crease_loc01.tx";
+connectAttr "addDoubleLinear41.o" "R_Crease_loc01.ty";
+connectAttr "motionPath14.rx" "R_Crease_loc01.rx";
+connectAttr "motionPath14.ry" "R_Crease_loc01.ry";
+connectAttr "motionPath14.rz" "R_Crease_loc01.rz";
+connectAttr "motionPath14.msg" "R_Crease_loc01.sml";
+connectAttr "motionPath14.ro" "R_Crease_loc01.ro";
+connectAttr "addDoubleLinear45.o" "R_Crease_loc02.tz";
+connectAttr "addDoubleLinear43.o" "R_Crease_loc02.tx";
+connectAttr "addDoubleLinear44.o" "R_Crease_loc02.ty";
+connectAttr "motionPath15.rx" "R_Crease_loc02.rx";
+connectAttr "motionPath15.ry" "R_Crease_loc02.ry";
+connectAttr "motionPath15.rz" "R_Crease_loc02.rz";
+connectAttr "motionPath15.msg" "R_Crease_loc02.sml";
+connectAttr "motionPath15.ro" "R_Crease_loc02.ro";
+connectAttr "addDoubleLinear48.o" "R_Crease_loc03.tz";
+connectAttr "addDoubleLinear46.o" "R_Crease_loc03.tx";
+connectAttr "addDoubleLinear47.o" "R_Crease_loc03.ty";
+connectAttr "motionPath16.rx" "R_Crease_loc03.rx";
+connectAttr "motionPath16.ry" "R_Crease_loc03.ry";
+connectAttr "motionPath16.rz" "R_Crease_loc03.rz";
+connectAttr "motionPath16.msg" "R_Crease_loc03.sml";
+connectAttr "motionPath16.ro" "R_Crease_loc03.ro";
 connectAttr "addDoubleLinear51.o" "L_Cheek_loc01.tz";
 connectAttr "addDoubleLinear49.o" "L_Cheek_loc01.tx";
 connectAttr "addDoubleLinear50.o" "L_Cheek_loc01.ty";
@@ -4178,7 +3377,6 @@ connectAttr "Neck_jnt01.s" "HeadBase_jnt01.is";
 connectAttr "NoseBase_jnt01.s" "NoseTip_jnt01.is";
 connectAttr "LowerJaw_jnt01.s" "LowerJaw_jnt02.is";
 connectAttr "Neck_jnt01.s" "Neck_jnt02.is";
-connectAttr "Chest_jnt01.s" "L_clav_jnt01.is";
 connectAttr "L_clav_jnt01.s" "L_clav_jnt02.is";
 connectAttr "L_clav_jnt02.s" "L_shoulder_jnt01.is";
 connectAttr "L_shoulder_jnt02.s" "L_elbow_jnt01.is";
@@ -4344,6 +3542,66 @@ connectAttr "LowerLip_loc05.tmry" "addDoubleLinear29.i1";
 connectAttr "motionPath10.yc" "addDoubleLinear29.i2";
 connectAttr "LowerLip_loc05.tmrx" "addDoubleLinear28.i1";
 connectAttr "motionPath10.xc" "addDoubleLinear28.i2";
+connectAttr "L_Crease_loc01.tmrz" "addDoubleLinear33.i1";
+connectAttr "motionPath11.zc" "addDoubleLinear33.i2";
+connectAttr "motionPath11_uValue.o" "motionPath11.u";
+connectAttr "L_Crease_crvShape.ws" "motionPath11.gp";
+connectAttr "positionMarkerShape21.t" "motionPath11.pmt[2]";
+connectAttr "positionMarkerShape22.t" "motionPath11.pmt[3]";
+connectAttr "L_Crease_loc01.tmry" "addDoubleLinear32.i1";
+connectAttr "motionPath11.yc" "addDoubleLinear32.i2";
+connectAttr "L_Crease_loc01.tmrx" "addDoubleLinear31.i1";
+connectAttr "motionPath11.xc" "addDoubleLinear31.i2";
+connectAttr "L_Crease_loc02.tmrz" "addDoubleLinear36.i1";
+connectAttr "motionPath12.zc" "addDoubleLinear36.i2";
+connectAttr "motionPath12_uValue.o" "motionPath12.u";
+connectAttr "L_Crease_crvShape.ws" "motionPath12.gp";
+connectAttr "positionMarkerShape23.t" "motionPath12.pmt[2]";
+connectAttr "positionMarkerShape24.t" "motionPath12.pmt[3]";
+connectAttr "L_Crease_loc02.tmry" "addDoubleLinear35.i1";
+connectAttr "motionPath12.yc" "addDoubleLinear35.i2";
+connectAttr "L_Crease_loc02.tmrx" "addDoubleLinear34.i1";
+connectAttr "motionPath12.xc" "addDoubleLinear34.i2";
+connectAttr "L_Crease_loc03.tmrx" "addDoubleLinear37.i1";
+connectAttr "motionPath13.xc" "addDoubleLinear37.i2";
+connectAttr "motionPath13_uValue.o" "motionPath13.u";
+connectAttr "L_Crease_crvShape.ws" "motionPath13.gp";
+connectAttr "positionMarkerShape25.t" "motionPath13.pmt[2]";
+connectAttr "positionMarkerShape26.t" "motionPath13.pmt[3]";
+connectAttr "L_Crease_loc03.tmrz" "addDoubleLinear39.i1";
+connectAttr "motionPath13.zc" "addDoubleLinear39.i2";
+connectAttr "L_Crease_loc03.tmry" "addDoubleLinear38.i1";
+connectAttr "motionPath13.yc" "addDoubleLinear38.i2";
+connectAttr "R_Crease_loc01.tmrz" "addDoubleLinear42.i1";
+connectAttr "motionPath14.zc" "addDoubleLinear42.i2";
+connectAttr "motionPath14_uValue.o" "motionPath14.u";
+connectAttr "R_Crease_crvShape.ws" "motionPath14.gp";
+connectAttr "positionMarkerShape27.t" "motionPath14.pmt[2]";
+connectAttr "positionMarkerShape28.t" "motionPath14.pmt[3]";
+connectAttr "R_Crease_loc01.tmry" "addDoubleLinear41.i1";
+connectAttr "motionPath14.yc" "addDoubleLinear41.i2";
+connectAttr "R_Crease_loc01.tmrx" "addDoubleLinear40.i1";
+connectAttr "motionPath14.xc" "addDoubleLinear40.i2";
+connectAttr "R_Crease_loc02.tmrz" "addDoubleLinear45.i1";
+connectAttr "motionPath15.zc" "addDoubleLinear45.i2";
+connectAttr "motionPath15_uValue.o" "motionPath15.u";
+connectAttr "R_Crease_crvShape.ws" "motionPath15.gp";
+connectAttr "positionMarkerShape29.t" "motionPath15.pmt[2]";
+connectAttr "positionMarkerShape30.t" "motionPath15.pmt[3]";
+connectAttr "R_Crease_loc02.tmry" "addDoubleLinear44.i1";
+connectAttr "motionPath15.yc" "addDoubleLinear44.i2";
+connectAttr "R_Crease_loc02.tmrx" "addDoubleLinear43.i1";
+connectAttr "motionPath15.xc" "addDoubleLinear43.i2";
+connectAttr "R_Crease_loc03.tmrz" "addDoubleLinear48.i1";
+connectAttr "motionPath16.zc" "addDoubleLinear48.i2";
+connectAttr "motionPath16_uValue.o" "motionPath16.u";
+connectAttr "R_Crease_crvShape.ws" "motionPath16.gp";
+connectAttr "positionMarkerShape31.t" "motionPath16.pmt[2]";
+connectAttr "positionMarkerShape32.t" "motionPath16.pmt[3]";
+connectAttr "R_Crease_loc03.tmrx" "addDoubleLinear46.i1";
+connectAttr "motionPath16.xc" "addDoubleLinear46.i2";
+connectAttr "R_Crease_loc03.tmry" "addDoubleLinear47.i1";
+connectAttr "motionPath16.yc" "addDoubleLinear47.i2";
 connectAttr "L_Cheek_loc01.tmrz" "addDoubleLinear51.i1";
 connectAttr "motionPath17.zc" "addDoubleLinear51.i2";
 connectAttr "motionPath17_uValue.o" "motionPath17.u";
